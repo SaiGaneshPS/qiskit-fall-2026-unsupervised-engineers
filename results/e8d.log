@@ -1,0 +1,10 @@
+Downtown         cover [0.5  0.75 0.88] K4: best classical mix_flip full x2.35 line x0.95 lines3 x0.67 circuit3 x0.50 | K16: best classical mix_flip full x1.68 line x1.01 lines3 x0.75 circuit3 x0.62  [151s]
+Georgestown      cover [0.53 0.76 0.91] K4: best classical uniform full x4.37 line x1.88 lines3 x3.11 circuit3 x2.60 | K16: best classical uniform full x4.53 line x2.48 lines3 x2.85 circuit3 x2.60  [265s]
+Churchill Park   cover [0.54 0.79 0.92] K4: best classical mix_flip full x5.43 line x3.16 lines3 x1.93 circuit3 x1.91 | K16: best classical mix_flip full x3.10 line x2.40 lines3 x1.43 circuit3 x1.35  [457s]
+Cowan Heights    cover [0.56 0.85 0.94] K4: best classical mix_flip full x5.26 line x1.33 lines3 x0.80 circuit3 x0.34 | K16: best classical mix_flip full x4.89 line x1.48 lines3 x0.97 circuit3 x0.59  [570s]
+Clovelly Trails  cover [0.56 0.82 0.95] K4: best classical mix_flip full x1.42 line x1.01 lines3 x0.56 circuit3 x0.69 | K16: best classical mix_flip full x2.15 line x1.58 lines3 x0.86 circuit3 x0.93  [675s]
+White Hills      cover [0.55 0.8  0.93] K4: best classical mix_flip full x3.27 line x1.71 lines3 x1.18 circuit3 x0.38 | K16: best classical mix_flip full x3.11 line x1.61 lines3 x1.00 circuit3 x0.53  [778s]
+
+median ratio to best classical (wins / instances):
+  K=  4: full x3.82 (min x1.42, 6/6)  line x1.52 (min x0.95, 5/6)  lines3 x0.99 (min x0.56, 3/6)  circuit3 x0.59 (min x0.34, 2/6)
+  K= 16: full x3.10 (min x1.68, 6/6)  line x1.59 (min x1.01, 6/6)  lines3 x0.99 (min x0.75, 3/6)  circuit3 x0.78 (min x0.53, 2/6)

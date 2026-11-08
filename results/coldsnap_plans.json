@@ -1,0 +1,920 @@
+{
+ "safe": 0.1,
+ "powers": [
+  0,
+  1,
+  2,
+  4,
+  8
+ ],
+ "shots": 100,
+ "trials": 200,
+ "cases": [
+  {
+   "plan": "Hydro's plan: Unit 8 + turbine",
+   "link": "1.1%",
+   "p_exact": 0.02749338176974228,
+   "p_independent_days": 0.0366448385634674,
+   "qubits": 22,
+   "cx": 3470,
+   "aer_seconds": [
+    2.783292055130005,
+    10.182143449783325,
+    17.62499475479126,
+    32.30788588523865,
+    61.73988318443298
+   ],
+   "measured_flag": [
+    0.02925,
+    0.2286,
+    0.54705,
+    0.9955,
+    0.0913
+   ],
+   "theory_flag": [
+    0.027493381769742278,
+    0.22963168075645168,
+    0.5474335282379549,
+    0.9948863760926826,
+    0.09289931409536316
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 0.5431838675001935,
+     "mc_rel_rmse": 0.5947469196988658,
+     "qae_mean": 0.029249997648254797
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 0.17825930793509456,
+     "mc_rel_rmse": 0.2973734598494329,
+     "qae_mean": 0.027614959387391738
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.09644115321667909,
+     "mc_rel_rmse": 0.19824897323295526,
+     "qae_mean": 0.02754918277883296
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.08348451282278191,
+     "mc_rel_rmse": 0.140183193336293,
+     "qae_mean": 0.02839667726287844
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.050797980524606996,
+     "mc_rel_rmse": 0.10053057793403516,
+     "qae_mean": 0.027742051198469245
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.027742051198469245,
+   "qae_sd": 0.0013742918830377223,
+   "mc_sd": 0.002763925558673258,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "mc_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "need": 1.3186194924564456,
+   "n_mc_needed": 20.34348813878506,
+   "n_qae_needed": 100.0,
+   "built": [
+    "Avalon combustion turbine, 150 MW diesel",
+    "Bay d'Espoir Unit 8, 150 MW hydro"
+   ]
+  },
+  {
+   "plan": "Hydro's plan: Unit 8 + turbine",
+   "link": "5%",
+   "p_exact": 0.09507157393713116,
+   "p_independent_days": 0.14331666983695654,
+   "qubits": 22,
+   "cx": 3470,
+   "aer_seconds": [
+    2.7341699600219727,
+    10.535404920578003,
+    17.692893505096436,
+    32.02069807052612,
+    60.629056215286255
+   ],
+   "measured_flag": [
+    0.09605,
+    0.64735,
+    1.0,
+    0.09635,
+    0.6694
+   ],
+   "theory_flag": [
+    0.09507157393713116,
+    0.6524666945285085,
+    0.9999872147881913,
+    0.09930799563579976,
+    0.6660238790277805
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 0.2961734590529451,
+     "mc_rel_rmse": 0.3085188994184537,
+     "qae_mean": 0.09605000266329634
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 0.08979252179015924,
+     "mc_rel_rmse": 0.15425944970922684,
+     "qae_mean": 0.09449573523130486
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.039839954640880644,
+     "mc_rel_rmse": 0.10283963313948452,
+     "qae_mean": 0.09499125956056936
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.02689091259425033,
+     "mc_rel_rmse": 0.07271860196766632,
+     "qae_mean": 0.09545107436545111
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.015260950889429605,
+     "mc_rel_rmse": 0.05214921210153307,
+     "qae_mean": 0.09503305385259932
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.09503305385259932,
+   "qae_sd": 0.0014503711878445698,
+   "mc_sd": 0.004957907674074036,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 184,
+    "unsafe": 0,
+    "unsure": 16
+   },
+   "mc_calls": {
+    "safe": 34,
+    "unsafe": 0,
+    "unsure": 166
+   },
+   "need": 0.025919556491869555,
+   "n_mc_needed": 14167.995645993977,
+   "n_qae_needed": 1927.4958244933273,
+   "built": [
+    "Avalon combustion turbine, 150 MW diesel",
+    "Bay d'Espoir Unit 8, 150 MW hydro"
+   ]
+  },
+  {
+   "plan": "cheapest plan without the turbine",
+   "link": "1.1%",
+   "p_exact": 0.016876525979423816,
+   "p_independent_days": 0.027814366971456526,
+   "qubits": 22,
+   "cx": 3564,
+   "aer_seconds": [
+    2.770301342010498,
+    10.420036554336548,
+    17.88839817047119,
+    32.446332931518555,
+    62.43701148033142
+   ],
+   "measured_flag": [
+    0.01775,
+    0.1433,
+    0.36405,
+    0.84885,
+    0.6432
+   ],
+   "theory_flag": [
+    0.016876525979423816,
+    0.1451300302944618,
+    0.36758992208254626,
+    0.8495742002988174,
+    0.6395903028931088
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 0.7189049880940933,
+     "mc_rel_rmse": 0.7632424321484338,
+     "qae_mean": 0.017749997963065426
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 0.26033065010382833,
+     "mc_rel_rmse": 0.3816212160742169,
+     "qae_mean": 0.016815446524701287
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.132467113414679,
+     "mc_rel_rmse": 0.25441414404947793,
+     "qae_mean": 0.01674437526431827
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.06636338769009592,
+     "mc_rel_rmse": 0.17989796648715695,
+     "qae_mean": 0.01684718796123143
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.03729417198876541,
+     "mc_rel_rmse": 0.12901151778391798,
+     "qae_mean": 0.016817850180168476
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.016817850180168476,
+   "qae_sd": 0.0006266550518496449,
+   "mc_sd": 0.0021772662315251894,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "mc_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "need": 2.4626950511592822,
+   "n_mc_needed": 9.60514086122254,
+   "n_qae_needed": 100.0,
+   "built": [
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "10,000 oil homes to heat pumps",
+    "30,000 oil homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ]
+  },
+  {
+   "plan": "cheapest plan without the turbine",
+   "link": "5%",
+   "p_exact": 0.07604569529085875,
+   "p_independent_days": 0.12045129619565219,
+   "qubits": 22,
+   "cx": 3564,
+   "aer_seconds": [
+    2.5689778327941895,
+    8.677340984344482,
+    16.751153707504272,
+    27.161155223846436,
+    53.78677320480347
+   ],
+   "measured_flag": [
+    0.0775,
+    0.5494,
+    0.9721,
+    0.3401,
+    0.99855
+   ],
+   "theory_flag": [
+    0.07604569529085874,
+    0.5526568036300135,
+    0.9700709247917035,
+    0.34436564625209015,
+    0.9986209942914799
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 0.33211599191683006,
+     "mc_rel_rmse": 0.34856833269929965,
+     "qae_mean": 0.07750000193406817
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 0.10451050210208691,
+     "mc_rel_rmse": 0.17428416634964983,
+     "qae_mean": 0.07588519005461052
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.07476188424896445,
+     "mc_rel_rmse": 0.11618944423309988,
+     "qae_mean": 0.0771392157331552
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.03259279086063922,
+     "mc_rel_rmse": 0.08215834391952113,
+     "qae_mean": 0.07640941177356668
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.01979116551141559,
+     "mc_rel_rmse": 0.05891880188888765,
+     "qae_mean": 0.07562670767391183
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.07562670767391183,
+   "qae_sd": 0.001445535725309415,
+   "mc_sd": 0.004480521255344823,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "mc_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "need": 0.15749941280384833,
+   "n_mc_needed": 489.7990971014857,
+   "n_qae_needed": 264.2161016608361,
+   "built": [
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "10,000 oil homes to heat pumps",
+    "30,000 oil homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ]
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link": "1.1%",
+   "p_exact": 0.015041237096159038,
+   "p_independent_days": 0.023283490065717394,
+   "qubits": 22,
+   "cx": 3654,
+   "aer_seconds": [
+    2.2948827743530273,
+    10.177262306213379,
+    15.62706971168518,
+    28.90926718711853,
+    52.94883894920349
+   ],
+   "measured_flag": [
+    0.0162,
+    0.12895,
+    0.3299,
+    0.79985,
+    0.76045
+   ],
+   "theory_flag": [
+    0.015041237096159038,
+    0.12999584893036156,
+    0.3326562345680321,
+    0.7995371753940769,
+    0.7536340437424961
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 0.7693272559694487,
+     "mc_rel_rmse": 0.8092211882647805,
+     "qae_mean": 0.01619999802946085
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 0.27553793545573235,
+     "mc_rel_rmse": 0.40461059413239026,
+     "qae_mean": 0.015090049514576834
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.14544544671021356,
+     "mc_rel_rmse": 0.26974039608826017,
+     "qae_mean": 0.014973128101164655
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.06824573769830149,
+     "mc_rel_rmse": 0.19073526323395404,
+     "qae_mean": 0.015046396310536505
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.03935710559235879,
+     "mc_rel_rmse": 0.13678334605568904,
+     "qae_mean": 0.014946929740559094
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.014946929740559094,
+   "qae_sd": 0.0005844192999477581,
+   "mc_sd": 0.002057390738829589,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "mc_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "need": 2.824194657683317,
+   "n_mc_needed": 8.210039316356717,
+   "n_qae_needed": 100.0,
+   "built": [
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "Wind, west coast (Port au Port), 100 MW",
+    "Battery, 25 MW for 4 h",
+    "Battery, 50 MW for 4 h",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ]
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link": "5%",
+   "p_exact": 0.06772497073346984,
+   "p_independent_days": 0.10081720923913046,
+   "qubits": 22,
+   "cx": 3654,
+   "aer_seconds": [
+    2.457442283630371,
+    8.911198854446411,
+    15.44086241722107,
+    29.062127351760864,
+    58.46236729621887
+   ],
+   "measured_flag": [
+    0.0704,
+    0.50255,
+    0.9381,
+    0.4868,
+    0.94665
+   ],
+   "theory_flag": [
+    0.06772497073346982,
+    0.5044147320047653,
+    0.9366446745617831,
+    0.48675718066575036,
+    0.9449741581286207
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 0.36348460141943917,
+     "mc_rel_rmse": 0.3710202493357942,
+     "qae_mean": 0.07040000198691193
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 0.11070438610672644,
+     "mc_rel_rmse": 0.1855101246678971,
+     "qae_mean": 0.06790118060767197
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.06197601313129853,
+     "mc_rel_rmse": 0.12367341644526471,
+     "qae_mean": 0.0682234451332527
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.03337446018682325,
+     "mc_rel_rmse": 0.08745031142095457,
+     "qae_mean": 0.06782036065129
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.01923974402116814,
+     "mc_rel_rmse": 0.06271386846331631,
+     "qae_mean": 0.0679083303379489
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.0679083303379489,
+   "qae_sd": 0.0012900454194062305,
+   "mc_sd": 0.0042472949062607734,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "mc_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "need": 0.23828012708597435,
+   "n_mc_needed": 242.4485436793354,
+   "n_qae_needed": 171.6430729212738,
+   "built": [
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "Wind, west coast (Port au Port), 100 MW",
+    "Battery, 25 MW for 4 h",
+    "Battery, 50 MW for 4 h",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ]
+  },
+  {
+   "plan": "same, plus the turbine",
+   "link": "1.1%",
+   "p_exact": 0.0003560358345360914,
+   "p_independent_days": 0.0002840057163145535,
+   "qubits": 22,
+   "cx": 3426,
+   "aer_seconds": [
+    2.5072121620178223,
+    9.020607948303223,
+    16.607696056365967,
+    28.319496631622314,
+    51.789732217788696
+   ],
+   "measured_flag": [
+    0.00045,
+    0.0031,
+    0.00865,
+    0.02815,
+    0.09875
+   ],
+   "theory_flag": [
+    0.00035603583453609137,
+    0.0032012809565597215,
+    0.00887556882374465,
+    0.028566096732597367,
+    0.0994247283705062
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 5.828539669892814,
+     "mc_rel_rmse": 5.29877914527406,
+     "qae_mean": 0.000449999847260777
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 1.7357636157055056,
+     "mc_rel_rmse": 2.64938957263703,
+     "qae_mean": 0.0003561179758560598
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.8845588006169405,
+     "mc_rel_rmse": 1.7662597150913537,
+     "qae_mean": 0.00034991805979184054
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.515517063195443,
+     "mc_rel_rmse": 1.2489342218777155,
+     "qae_mean": 0.0003510818448550369
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.25850982196888334,
+     "mc_rel_rmse": 0.8956571478990212,
+     "qae_mean": 0.0003532544701435394
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.0003532544701435394,
+   "qae_sd": 9.199672489472143e-05,
+   "mc_sd": 0.0003188860401104434,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "mc_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "need": 139.93530215195653,
+   "n_mc_needed": 0.1433827999630044,
+   "n_qae_needed": 100.0,
+   "built": [
+    "Avalon combustion turbine, 150 MW diesel",
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "Wind, west coast (Port au Port), 100 MW",
+    "Battery, 25 MW for 4 h",
+    "Battery, 50 MW for 4 h",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ]
+  },
+  {
+   "plan": "same, plus the turbine",
+   "link": "5%",
+   "p_exact": 0.0016015486005677467,
+   "p_independent_days": 0.0012896264656956527,
+   "qubits": 22,
+   "cx": 3426,
+   "aer_seconds": [
+    2.553948163986206,
+    8.682393074035645,
+    15.224923849105835,
+    27.970979928970337,
+    56.462886810302734
+   ],
+   "measured_flag": [
+    0.0014,
+    0.0142,
+    0.03925,
+    0.1203,
+    0.39705
+   ],
+   "theory_flag": [
+    0.001601548600567747,
+    0.014352444141506463,
+    0.039528019648998755,
+    0.1242754775742107,
+    0.3958801421219428
+   ],
+   "curve": [
+    {
+     "powers": [
+      0
+     ],
+     "queries": 100,
+     "qae_rel_rmse": 2.342991432853936,
+     "mc_rel_rmse": 2.4967892638872837,
+     "qae_mean": 0.0013999996120399939
+    },
+    {
+     "powers": [
+      0,
+      1
+     ],
+     "queries": 400,
+     "qae_rel_rmse": 0.9094819457580576,
+     "mc_rel_rmse": 1.2483946319436419,
+     "qae_mean": 0.0015715890761081209
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2
+     ],
+     "queries": 900,
+     "qae_rel_rmse": 0.4589095852165396,
+     "mc_rel_rmse": 0.8322630879624278,
+     "qae_mean": 0.001586433687135595
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "queries": 1800,
+     "qae_rel_rmse": 0.21775977783238162,
+     "mc_rel_rmse": 0.5884988732294889,
+     "qae_mean": 0.0015608472440702625
+    },
+    {
+     "powers": [
+      0,
+      1,
+      2,
+      4,
+      8
+     ],
+     "queries": 3500,
+     "qae_rel_rmse": 0.11881475029423925,
+     "mc_rel_rmse": 0.4220344139069638,
+     "qae_mean": 0.0015965448697416284
+    }
+   ],
+   "runs": 3500,
+   "qae_mean": 0.0015965448697416284,
+   "qae_sd": 0.00019022179757560947,
+   "mc_sd": 0.000675908624984127,
+   "truth": "safe",
+   "qae_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "mc_calls": {
+    "safe": 200,
+    "unsafe": 0,
+    "unsure": 0
+   },
+   "need": 30.71978314131402,
+   "n_mc_needed": 0.660583140342838,
+   "n_qae_needed": 100.0,
+   "built": [
+    "Avalon combustion turbine, 150 MW diesel",
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "Wind, west coast (Port au Port), 100 MW",
+    "Battery, 25 MW for 4 h",
+    "Battery, 50 MW for 4 h",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ]
+  }
+ ]
+}

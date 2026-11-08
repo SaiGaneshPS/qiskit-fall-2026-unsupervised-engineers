@@ -1,0 +1,20 @@
+{
+  "v": 4,
+  "createdOnFiles": {"v": 1, "at": "2026-11-07T04:45:00Z"},
+  "lists": "css",
+  "title": "Lights On, Oil Off",
+  "cover": "cover",
+  "order": ["cover", "darknl", "question", "pipeline", "ai", "validate", "wind", "heatpumps", "decision", "circuit", "correct", "rarity", "noise", "coldsnap", "limits", "thanks"],
+  "sections": {
+    "s1": {"description": "The problem: winter blackouts, Holyrood’s oil and heat pumps in St. John’s", "start": "cover"},
+    "s2": {"description": "The pipeline: an AI demand model and a reliability engine validated against NL Hydro", "start": "pipeline"},
+    "s3": {"description": "Sustainability results: wind at the peak, heat pumps and retiring Holyrood", "start": "wind"},
+    "s4": {"description": "The quantum component and the evidence for it", "start": "circuit"},
+    "s5": {"description": "Limits, next steps and sources", "start": "limits"}
+  },
+  "faces": {
+    "space-grotesk": {"family": "Space Grotesk", "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"},
+    "ibm-plex-sans": {"family": "IBM Plex Sans", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"}
+  },
+  "designSystems": []
+}

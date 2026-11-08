@@ -1,0 +1,20 @@
+<section id="ai" data-transition="fade" style="background:#F7F5F0;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">AI learns the island’s demand from the weather</h2>
+<img src="/_blob/131b3260d412b75c2cd23b9daa7fa880" alt="Three panels: predicted vs actual island demand in the unseen 2025-26 winter; error on hours colder than any training data (ours 41 MW vs 80 MW for baselines); and the 4 Feb 2023 flash-freeze record, about 320 MW above every model" style="width:1664px;height:421px;object-fit:contain;background:#FFFFFF;border-radius:12px">
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">5.7% vs 6.6%</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">hourly error on a winter it never saw, vs the utility-standard degree-hour model</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">41 vs 80 MW</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">error when colder than anything in training, thanks to a physics tail</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#B5432F">+320 MW</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">negative result: the Feb 2023 flash freeze beat every model, so we carry real errors forward</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7280">Data: NL Hydro island demand via Statistics Canada HFED (Sep 2022 to Nov 2026, 373k readings); ERA5 weather via Open-Meteo</p>
+<aside>The AI layer is gradient boosting on weather from three sites plus calendar features, trained on real NL Hydro demand. On the 2025-26 winter, which it never saw, it beats the linear degree-hour model utilities use. Trees cannot extrapolate, and the 1990 cold wave was 6 degrees colder than anything in our data, so we added a physics tail: below the coldest training temperature, demand keeps rising at the slope learned from the coldest hours. Trained only on mild hours, it halves the error on cold ones. The honest negative: the flash freeze of 4 February 2023 sits about 320 megawatts above every model. So the reliability engine does not trust point forecasts; it uses the model’s real out-of-sample error distribution.</aside>
+</section>

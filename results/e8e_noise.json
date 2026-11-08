@@ -1,0 +1,214 @@
+{
+ "area": [
+  "Downtown",
+  "Ecclesiastical District",
+  "Pennywell",
+  "Bannerman",
+  "Fort William",
+  "The Battery",
+  "Georgestown",
+  "Rabbittown"
+ ],
+ "n": 8,
+ "lines": [
+  [
+   [
+    4,
+    5
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    6
+   ]
+  ],
+  [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    7
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    2,
+    5
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    4,
+    6
+   ],
+   [
+    3,
+    6
+   ]
+  ],
+  [
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    3,
+    5
+   ]
+  ]
+ ],
+ "coverage": [
+  0.6147276270291095,
+  0.8490773896204393,
+  0.9707538783644581
+ ],
+ "draws_per_line": 8,
+ "keys": 2,
+ "shots": 256,
+ "budget_shots": 32,
+ "budget_samples_per_row": 1536,
+ "backend": "fake_fez",
+ "physical_path": [
+  22,
+  23,
+  24,
+  25,
+  37,
+  45,
+  44,
+  43
+ ],
+ "two_qubit_gates": {
+  "line0_r2": 14,
+  "line0_r3": 28,
+  "line0_r4": 42,
+  "line0_r5": 56,
+  "line0_r7": 84,
+  "line0_r8": 98,
+  "line1_r2": 14,
+  "line1_r4": 42,
+  "line1_r5": 56,
+  "line1_r6": 70,
+  "line1_r7": 84,
+  "line2_r2": 14,
+  "line2_r3": 28,
+  "line2_r5": 56,
+  "line2_r6": 70,
+  "line2_r7": 84,
+  "line2_r8": 98
+ },
+ "results": [
+  {
+   "k_eff": 4,
+   "T": 0.5104703868488708,
+   "classical": {
+    "local": 1.1917688746976296e-06,
+    "pair": 0.0,
+    "uniform": 0.006616163827102173,
+    "mix": 0.004451470886418618,
+    "mix_flip": 0.021918594755327203
+   },
+   "best_classical": "mix_flip",
+   "ideal_exact": {
+    "gap": 0.01999977786658569,
+    "tvd_stationary": 2.860770341511074e-14,
+    "max_marginal_bias": 1.662558979376172e-14,
+    "asymmetry": 1.4479684126177442e-16,
+    "ratio_vs_best_classical": 0.912457120989695
+   },
+   "noisy": {
+    "gap": 0.01711630406590625,
+    "tvd_stationary": 0.010947679938893572,
+    "max_marginal_bias": 0.009694888156559278,
+    "asymmetry": 0.06998761494954427,
+    "ratio_vs_best_classical": 0.7809033497344177
+   },
+   "noisy_budget": {
+    "gap": 0.015639755786163057,
+    "tvd_stationary": 0.02965132678845142,
+    "max_marginal_bias": 0.025879340802783868,
+    "asymmetry": 0.20304361979166669,
+    "ratio_vs_best_classical": 0.7135382519156204
+   }
+  },
+  {
+   "k_eff": 16,
+   "T": 1.2145351308158214,
+   "classical": {
+    "local": 0.0011803512182839704,
+    "pair": 3.3306690738754696e-16,
+    "uniform": 0.01693658075505322,
+    "mix": 0.01446936560193346,
+    "mix_flip": 0.04239912040701177
+   },
+   "best_classical": "mix_flip",
+   "ideal_exact": {
+    "gap": 0.03375465223699148,
+    "tvd_stationary": 5.759098468426884e-15,
+    "max_marginal_bias": 3.552713678800501e-15,
+    "asymmetry": 1.4479684126177442e-16,
+    "ratio_vs_best_classical": 0.7961168041450523
+   },
+   "noisy": {
+    "gap": 0.03077826907904635,
+    "tvd_stationary": 0.010936123755356797,
+    "max_marginal_bias": 0.008124592086890536,
+    "asymmetry": 0.06998761494954427,
+    "ratio_vs_best_classical": 0.7259176318656927
+   },
+   "noisy_budget": {
+    "gap": 0.029589183374883143,
+    "tvd_stationary": 0.032902777737493685,
+    "max_marginal_bias": 0.010419294850682548,
+    "asymmetry": 0.20304361979166669,
+    "ratio_vs_best_classical": 0.697872575912915
+   }
+  }
+ ],
+ "seconds": 597.5441477298737
+}

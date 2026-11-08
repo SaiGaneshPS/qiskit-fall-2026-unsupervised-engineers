@@ -1,0 +1,19 @@
+<section id="rarity" data-transition="fade" style="background:#F7F5F0;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">The safer the grid, the bigger the quantum advantage</h2>
+<img src="/_blob/759f1c33da4a87784dcd395327deed72" alt="Left: samples or queries needed for a 10% estimate vs shortfall probability for Monte Carlo, tuned importance sampling and amplitude estimation. Right: quantum query advantage vs Monte Carlo growing from 4x to 48x as the probability falls, and vs importance sampling between 0.5x and 2.7x" style="width:1504px;height:520px;object-fit:contain;background:#FFFFFF;border-radius:12px">
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">4x to 48x</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">fewer queries than Monte Carlo across 9 grid options; grows like p^-0.47 (theory p^-0.5)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#C9852B">about even</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">with tuned importance sampling at 10% (0.5x to 2.7x); ahead for every option at 5% or finer</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">queries</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">not seconds: one query = one run of the state preparation; a sample-count result</p>
+</div>
+</div>
+<aside>Now every portfolio from the decision slide becomes a quantum instance, 22 to 26 qubits each. For a 10 percent estimate, amplitude estimation needs 4 times fewer queries than Monte Carlo for the riskiest portfolio and 48 times fewer for the safest, growing like one over root p, exactly as theory says. The safer the grid, the bigger the win. To be fair we also compared against importance sampling, a classical trick that oversamples failures, tuned with knowledge of the answer. At 10 percent it is roughly a tie; because the quantum error falls like one over N, quantum is ahead for every portfolio once you ask for 5 percent or better. This is query complexity, not wall-clock time.</aside>
+</section>

@@ -1,0 +1,15 @@
+Hydro's plan: Unit 8 + turbine             1.91   2.60   3.47   4.34   5.20   6.07   6.94   7.80   8.67
+cheapest plan without the turbine          1.75   2.38   3.18   3.97   4.76   5.56   6.35   7.14   7.94
+strongest plan without the turbine         0.92   1.26   1.68   2.10   2.52   2.94   3.36   3.78   4.20
+same, plus the turbine                     0.20   0.27   0.36   0.45   0.54   0.63   0.72   0.81   0.90
+link 1.1%: LOLH 0.96  precision 96.0%  MC 3,292  IS 119  QAE 805
+link 2.0%: LOLH 1.73  precision 31.0%  MC 17,533  IS 675  QAE 2,235
+link 2.5%: LOLH 2.16  precision 14.9%  MC 60,625  IS 2,321  QAE 4,245
+link 3.0%: LOLH 2.58  precision 4.2%  MC 647,453  IS 24,603  QAE 14,330
+link 3.2%: LOLH 2.76  precision 1.0%  MC 10,547,538  IS 442,687  QAE 182,989
+link 3.4%: LOLH 2.93  precision 2.2%  MC 2,117,278  IS 82,477  QAE 24,057
+link 3.6%: LOLH 3.10  precision 4.8%  MC 405,875  IS 15,623  QAE 10,710
+link 4.0%: LOLH 3.44  precision 9.3%  MC 97,598  IS 4,210  QAE 5,560
+link 4.5%: LOLH 3.87  precision 13.8%  MC 39,421  IS 1,772  QAE 3,554
+break-even link outage rate: {"Hydro's plan: Unit 8 + turbine": 0.016137628718629147, 'cheapest plan without the turbine': 0.017631317268765205, 'strongest plan without the turbine': 0.03333474117783695, 'same, plus the turbine': inf}
+exit 0

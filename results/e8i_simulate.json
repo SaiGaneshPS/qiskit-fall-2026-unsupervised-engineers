@@ -1,0 +1,120 @@
+{
+ "area": [
+  "Downtown",
+  "Ecclesiastical District",
+  "Pennywell",
+  "Bannerman",
+  "Fort William",
+  "The Battery",
+  "Georgestown",
+  "Rabbittown"
+ ],
+ "n": 8,
+ "line": [
+  "The Battery",
+  "Fort William",
+  "Bannerman",
+  "Downtown",
+  "Pennywell",
+  "Rabbittown",
+  "Ecclesiastical District",
+  "Georgestown"
+ ],
+ "backend": "fake_fez",
+ "physical_path": [
+  22,
+  23,
+  24,
+  25,
+  37,
+  45,
+  44,
+  43
+ ],
+ "draws": 24,
+ "keys": 2,
+ "shots": 256,
+ "budget_shots": 32,
+ "results": [
+  {
+   "k_eff": 4,
+   "T": 0.4237205871389738,
+   "classical": {
+    "local": 4.9501080234826134e-08,
+    "pair": 0.0,
+    "uniform": 0.009241026429711918,
+    "mix": 0.0037320567259886417,
+    "mix_flip": 0.026044544371860545
+   },
+   "best_classical": "mix_flip",
+   "ideal_exact": {
+    "gap": 0.011725961603801127,
+    "tvd_stationary": 2.6874728051099485e-14,
+    "max_marginal_bias": 2.0539125955565396e-14,
+    "asymmetry": 1.297013906527227e-16,
+    "ratio_vs_best_classical": 0.45022717373663385
+   },
+   "noisy_budget": {
+    "gap": 0.012345605639630719,
+    "tvd_stationary": 0.05966663653087961,
+    "max_marginal_bias": 0.050977552338058896,
+    "asymmetry": 0.19262949625651044,
+    "ratio_vs_best_classical": 0.4740188756371316
+   },
+   "noisy": {
+    "gap": 0.01035985735834366,
+    "tvd_stationary": 0.045003240803913755,
+    "max_marginal_bias": 0.044959254160009676,
+    "asymmetry": 0.06810728708902994,
+    "ratio_vs_best_classical": 0.39777456692760654
+   },
+   "noisy_flip": {
+    "gap": 0.05799333500174042,
+    "tvd_stationary": 0.004943780222883052,
+    "max_marginal_bias": 0.003060815886055668,
+    "asymmetry": 0.05108046531677246,
+    "ratio_vs_best_classical": 2.2266980052988945
+   }
+  },
+  {
+   "k_eff": 16,
+   "T": 1.215240709533367,
+   "classical": {
+    "local": 0.0010613792210580897,
+    "pair": 1.1102230246251565e-15,
+    "uniform": 0.020786748495358442,
+    "mix": 0.013996374252103538,
+    "mix_flip": 0.04317600768282848
+   },
+   "best_classical": "mix_flip",
+   "ideal_exact": {
+    "gap": 0.025958078193145107,
+    "tvd_stationary": 2.0123095720527273e-14,
+    "max_marginal_bias": 9.880984919163893e-15,
+    "asymmetry": 1.297013906527227e-16,
+    "ratio_vs_best_classical": 0.601215341256966
+   },
+   "noisy_budget": {
+    "gap": 0.02531200176100501,
+    "tvd_stationary": 0.03277179669780395,
+    "max_marginal_bias": 0.018651826829123586,
+    "asymmetry": 0.19262949625651044,
+    "ratio_vs_best_classical": 0.5862515577389024
+   },
+   "noisy": {
+    "gap": 0.024693360029870548,
+    "tvd_stationary": 0.014718369612829534,
+    "max_marginal_bias": 0.011450895591161303,
+    "asymmetry": 0.06810728708902994,
+    "ratio_vs_best_classical": 0.571923189639679
+   },
+   "noisy_flip": {
+    "gap": 0.05719734717445246,
+    "tvd_stationary": 0.00921547947250954,
+    "max_marginal_bias": 0.0010545460879434199,
+    "asymmetry": 0.05108046531677246,
+    "ratio_vs_best_classical": 1.324748401812065
+   }
+  }
+ ]
+}

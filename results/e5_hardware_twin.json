@@ -1,0 +1,189 @@
+{
+ "backend": "ibm_quebec",
+ "job_id": "dbnkiblt7fqc73ajposg",
+ "layout": [
+  5,
+  7,
+  6
+ ],
+ "p_true": 0.021332180616632255,
+ "twins": {
+  "low": 0.00045513921687647004,
+  "high": 0.9995448607831234
+ },
+ "shots_per_circuit": 10000,
+ "trials": 10,
+ "shots_per_trial": 1000,
+ "ideal": {
+  "target": [
+   0.02133218061663226,
+   0.18122345864550807,
+   0.4475969076890447,
+   0.7314747659762558,
+   0.9380322056670033
+  ],
+  "low": [
+   0.0004551392168764701,
+   0.004091282819452345,
+   0.01133710285151012,
+   0.02213985761911328,
+   0.03642091480968664
+  ],
+  "high": [
+   0.9995448607831234,
+   0.9959087171805467,
+   0.9886628971484872,
+   0.9778601423808815,
+   0.963579085190305
+  ]
+ },
+ "measured": {
+  "target": [
+   0.0368,
+   0.1956,
+   0.4254,
+   0.6697,
+   0.8527
+  ],
+  "low": [
+   0.0124,
+   0.0266,
+   0.0489,
+   0.076,
+   0.1046
+  ],
+  "high": [
+   0.9866,
+   0.9735,
+   0.9519,
+   0.9244,
+   0.9078
+  ]
+ },
+ "corrected_target": [
+  0.025478531955755987,
+  0.18110801785696945,
+  0.4188267612710138,
+  0.6909412874435613,
+  0.8999754806236068
+ ],
+ "affine": {
+  "0": {
+   "a": 0.9750876012144055,
+   "b": 0.01195619939279732
+  },
+  "1": {
+   "a": 0.954711993553502,
+   "b": 0.022694003223249458
+  },
+  "2": {
+   "a": 0.9239498284700016,
+   "b": 0.038425085765000457
+  },
+  "3": {
+   "a": 0.8877074323178985,
+   "b": 0.056346283841053085
+  },
+  "4": {
+   "a": 0.8663031030296257,
+   "b": 0.07304844848519082
+  }
+ },
+ "comparison": [
+  {
+   "powers": [
+    0
+   ],
+   "queries": 1000,
+   "queries_with_twins": 3000,
+   "twin_amortised_rel_rmse": 0.4162132024918129,
+   "twin_paid_rel_rmse": 0.5570140674173037,
+   "twin_amortised_mean": 0.025600910288086816,
+   "mc_rel_rmse_same_queries": 0.2141904128611915,
+   "mc_rel_rmse_3x_queries": 0.12366289252324598
+  },
+  {
+   "powers": [
+    0,
+    1
+   ],
+   "queries": 4000,
+   "queries_with_twins": 12000,
+   "twin_amortised_rel_rmse": 0.09120167758424304,
+   "twin_paid_rel_rmse": 0.1105477514334299,
+   "twin_amortised_mean": 0.021727742015453418,
+   "mc_rel_rmse_same_queries": 0.10709520643059575,
+   "mc_rel_rmse_3x_queries": 0.06183144626162299
+  },
+  {
+   "powers": [
+    0,
+    1,
+    2
+   ],
+   "queries": 9000,
+   "queries_with_twins": 27000,
+   "twin_amortised_rel_rmse": 0.061979390665705916,
+   "twin_paid_rel_rmse": 0.06427092591078255,
+   "twin_amortised_mean": 0.0202702847326802,
+   "mc_rel_rmse_same_queries": 0.07139680428706384,
+   "mc_rel_rmse_3x_queries": 0.04122096417441533
+  },
+  {
+   "powers": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "queries": 16000,
+   "queries_with_twins": 48000,
+   "twin_amortised_rel_rmse": 0.08711569000469095,
+   "twin_paid_rel_rmse": 0.08995783547510613,
+   "twin_amortised_mean": 0.019867489513419757,
+   "mc_rel_rmse_same_queries": 0.053547603215297876,
+   "mc_rel_rmse_3x_queries": 0.030915723130811496
+  },
+  {
+   "powers": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "queries": 25000,
+   "queries_with_twins": 75000,
+   "twin_amortised_rel_rmse": 0.08928429129114503,
+   "twin_paid_rel_rmse": 0.09240823630167644,
+   "twin_amortised_mean": 0.019487322802068677,
+   "mc_rel_rmse_same_queries": 0.0428380825722383,
+   "mc_rel_rmse_3x_queries": 0.0247325785046492
+  }
+ ],
+ "two_qubit_gates": {
+  "target": [
+   4,
+   18,
+   32,
+   46,
+   60
+  ],
+  "low": [
+   4,
+   18,
+   32,
+   46,
+   60
+  ],
+  "high": [
+   4,
+   18,
+   32,
+   46,
+   60
+  ]
+ },
+ "qpu_usage_seconds": 43,
+ "options": "SamplerV2, gate twirling, dynamical decoupling, optimization_level 3, same layout and transpilation for target and twins"
+}

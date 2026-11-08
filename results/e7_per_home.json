@@ -1,0 +1,17 @@
+{
+ "per_home": {
+  "heat_kwh": 9549.02061885046,
+  "bb_kwh_saved": 5918.220246216373,
+  "oil_kwh_added": 3227.032899152168,
+  "oil_share_replaced": 0.9184230153444889,
+  "oil_litres_saved": 1096.255038793917,
+  "bb_bill_saving": 828.5508344702923,
+  "oil_bill_saving": 1302.2234561889638,
+  "oil_co2_t": 3.017990121799654
+ },
+ "wind_mwh": {
+  "wind_avalon": 351807.62037414894,
+  "wind_burin": 327139.3002331839,
+  "wind_west": 232515.28578769308
+ }
+}

@@ -1,0 +1,28 @@
+<section id="limits" data-transition="fade" style="background:#E9EEF3;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">What the evidence supports, and what it does not</h2>
+<div style="display:flex;gap:56px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;color:#1F6F7A">Supported (in our model)</h3>
+<ul style="font-size:26px;line-height:1.45;color:#14213D">
+<li>AI beats the utility baseline on an unseen winter</li>
+<li>Engine reproduces NL Hydro’s LOLH within ~10%</li>
+<li>Baseboard-first heat pumps halve blackout risk</li>
+<li>No-new-diesel retirement works at the link’s measured reliability</li>
+<li>Circuits exact; 4x to 48x fewer queries than Monte Carlo</li>
+<li>3-qubit version beats Monte Carlo under Heron noise</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:36px;font-weight:600;color:#B5432F">Limits and next steps</h3>
+<ul style="font-size:26px;line-height:1.45;color:#14213D">
+<li>Screening model: no transmission, hydro energy or imports</li>
+<li>Four winters of demand; 2023-24 peaks disagree with Hydro</li>
+<li>Simulators only so far; next: the IBM hardware run</li>
+<li>Advantage is in queries, not seconds; deep circuits need fault tolerance</li>
+<li>Importance sampling ties at 10%; next: combine it with QAE</li>
+<li>Cold-snap parameters illustrative; next: hourly steps</li>
+</ul>
+</div>
+</div>
+<aside>To be clear about what we showed. Within our model, the AI, the validation, the heat-pump finding and the retirement finding are supported, and the quantum results are exact on simulators with a query advantage that grows as the grid gets safer. Limits: it is a screening model without transmission or hydro limits; we have four winters of demand data, and the 2023-24 peaks in the archive disagree with Hydro’s statements; everything quantum is simulated; the advantage is counted in queries, and deep circuits need fault-tolerant machines; tuned importance sampling ties us at 10 percent. Next steps are on the right.</aside>
+</section>

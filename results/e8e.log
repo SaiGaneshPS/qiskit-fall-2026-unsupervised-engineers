@@ -1,0 +1,6 @@
+  line 0: done
+  line 1: done
+  line 2: done
+K=4: best classical mix_flip gap 2.192e-02 | ideal_exact gap 2.000e-02 (x0.91, stationary TVD 0.000)  noisy gap 1.712e-02 (x0.78, stationary TVD 0.011)  noisy_budget gap 1.564e-02 (x0.71, stationary TVD 0.030)
+K=16: best classical mix_flip gap 4.240e-02 | ideal_exact gap 3.375e-02 (x0.80, stationary TVD 0.000)  noisy gap 3.078e-02 (x0.73, stationary TVD 0.011)  noisy_budget gap 2.959e-02 (x0.70, stationary TVD 0.033)
+done in 598s; two-qubit gates per (line, Trotter steps): {'line0_r2': 14, 'line0_r3': 28, 'line0_r4': 42, 'line0_r5': 56, 'line0_r7': 84, 'line0_r8': 98, 'line1_r2': 14, 'line1_r4': 42, 'line1_r5': 56, 'line1_r6': 70, 'line1_r7': 84, 'line2_r2': 14, 'line2_r3': 28, 'line2_r5': 56, 'line2_r6': 70, 'line2_r7': 84, 'line2_r8': 98}

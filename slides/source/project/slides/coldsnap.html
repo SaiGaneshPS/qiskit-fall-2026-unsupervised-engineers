@@ -1,0 +1,19 @@
+<section id="coldsnap" data-transition="fade" style="background:#F7F5F0;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">A 3-day cold snap: where the classical shortcut breaks</h2>
+<img src="/_blob/b276caa782d623b74233b6a087f7d11e" alt="Left: daily peaks of the worst 3-day cold snap in four severity classes vs supply with everything up, with the frazil shutdown and with the link out. Middle: probability of at least one shortfall day, 9.6% with persistent outages vs 14.7% if days are independent at a 5% link outage rate, 2.9% vs 4.1% at 1.1%. Right: circuit two-qubit gates grow linearly with days while exact enumeration grows exponentially" style="width:1664px;height:421px;object-fit:contain;background:#FFFFFF;border-radius:12px">
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">9.6% vs 14.7%</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">chance of a shortfall day in the winter’s worst snap: outages that persist vs days treated as independent</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">linear vs 2^n</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">circuit grows to 16,690 gates (6 plants, 7 days); exact enumeration to 10^13 trajectories</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">circuit = exact</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">22-qubit chronological circuit matches enumeration and Monte Carlo</p>
+</div>
+</div>
+<aside>A judge might say: a classical convolution solves your single-hour problem instantly, so why quantum? Because real cold snaps last days and outages persist; Bay d’Espoir was down four days in January 2026. We extended the circuit in time: each plant gets a qubit per day whose rotation depends on its own state the day before, plus a severity register learned from the worst cold snap of each of the 46 winters. Two things come out. Treating days as independent, which is what makes the fast classical method fast, overstates the risk by half. And the circuit grows linearly with days and plants, while exact enumeration explodes, which is why planners sample, and sampling is what amplitude estimation speeds up. The persistence parameters are illustrative.</aside>
+</section>

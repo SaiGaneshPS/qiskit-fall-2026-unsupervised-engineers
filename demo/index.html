@@ -1,0 +1,538 @@
+<title>Lights On, Oil Off</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a planner's console. Pick a situation, read the verdict beside the plan, then see how classical and quantum prove it. Few numbers, each one explained. */
+:root {
+  --paper: #f5f7fb; --panel: #ffffff; --panel-2: #eef2f9; --ink: #141a2e; --ink-2: #454e68; --ink-3: #636b86;
+  --rule: #d8deeb; --gridline: #e4e9f2; --accent: #1f4fb4;
+  --q: #2a78d6; --mc: #eb6834; --ref: #a3aabd; --plan: #6250d6;
+  --ok: #16804f; --bad: #c2312f; --unsure: #9a6a00;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1222; --panel: #161b2f; --panel-2: #1c233b; --ink: #e8ebf5; --ink-2: #b6bdd2; --ink-3: #8e96ae;
+    --rule: #2b3253; --gridline: #20263f; --accent: #86abff;
+    --q: #3987e5; --mc: #d95926; --ref: #687089; --plan: #9085e9;
+    --ok: #3fbf83; --bad: #f06b67; --unsure: #e0b44a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1222; --panel: #161b2f; --panel-2: #1c233b; --ink: #e8ebf5; --ink-2: #b6bdd2; --ink-3: #8e96ae;
+  --rule: #2b3253; --gridline: #20263f; --accent: #86abff;
+  --q: #3987e5; --mc: #d95926; --ref: #687089; --plan: #9085e9;
+  --ok: #3fbf83; --bad: #f06b67; --unsure: #e0b44a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--font-mono); }
+.k { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-3); }
+.note { font-size: 13px; color: var(--ink-3); line-height: 1.45; }
+
+header.top { border-bottom: 1px solid var(--rule); }
+header.top .wrap { padding-block: 16px 14px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 28px; align-items: center; }
+header.top h1 { font-size: 30px; font-weight: 800; white-space: nowrap; }
+header.top p { color: var(--ink-2); max-width: 90ch; font-size: 14.5px; }
+header.top p b { color: var(--ink); }
+@media (max-width: 760px) { header.top .wrap { grid-template-columns: minmax(0, 1fr); } }
+
+main { padding-block: 14px 32px; display: flex; flex-direction: column; gap: 14px; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.panel h2 { font-size: 18px; font-weight: 800; }
+.row-head { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; justify-content: space-between; }
+
+/* situations */
+.sits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 1000px) { .sits { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .sits { grid-template-columns: minmax(0, 1fr); } }
+.sit { text-align: left; background: var(--panel); border: 1.5px solid var(--rule); border-radius: 10px; padding: 9px 11px; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 8px; align-items: start; min-width: 0; }
+.sit:hover { border-color: var(--ink-3); }
+.sit[aria-pressed="true"] { border-color: var(--plan); background: color-mix(in srgb, var(--plan) 9%, var(--panel)); }
+.sit b { font-family: var(--font-display); font-size: 14.5px; }
+.sit span.d { grid-column: 1 / -1; font-size: 12.5px; color: var(--ink-2); line-height: 1.35; }
+.badge { font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; padding: 1px 8px; border-radius: 999px; border: 1.5px solid currentColor; white-space: nowrap; }
+.badge.ok { color: var(--ok); } .badge.bad { color: var(--bad); } .badge.unsure { color: var(--unsure); }
+
+/* workspace */
+.work { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 14px; align-items: start; }
+@media (max-width: 900px) { .work { grid-template-columns: minmax(0, 1fr); } }
+.slider { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; align-items: center; }
+.slider label { font-weight: 700; font-size: 14px; }
+.slider .val { font-family: var(--font-mono); font-size: 18px; }
+.slider input { grid-column: 1 / -1; }
+.slider .note { grid-column: 1 / -1; }
+input[type="range"] { width: 100%; accent-color: var(--plan); }
+.chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+.chips .g { grid-column: 1 / -1; margin-top: 2px; }
+.chip { text-align: left; border: 1.5px solid var(--rule); background: var(--panel); border-radius: 8px; padding: 4px 8px; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; min-width: 0; }
+.chip:hover { border-color: var(--ink-3); }
+.chip b { font-size: 13px; line-height: 1.3; }
+.chip span { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); }
+.chip[aria-pressed="true"] { border-color: var(--plan); background: color-mix(in srgb, var(--plan) 14%, var(--panel)); }
+.chip[aria-pressed="true"] b::before { content: "\2713  "; color: var(--plan); }
+.actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.btn { font-weight: 700; font-size: 13px; background: var(--panel); border: 1.5px solid var(--ink); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+.btn:hover { background: var(--panel-2); }
+.btn.primary { background: var(--ink); color: var(--paper); }
+
+.verdict { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center; border-left: 6px solid var(--ok); padding: 12px 16px; background: color-mix(in srgb, var(--ok) 7%, var(--panel)); border-radius: 10px; }
+.verdict.fail { border-left-color: var(--bad); background: color-mix(in srgb, var(--bad) 7%, var(--panel)); }
+.status { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--ok); }
+.verdict.fail .status { color: var(--bad); }
+.status svg { width: 18px; height: 18px; }
+.bignum { font-family: var(--font-display); font-weight: 800; font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: center; }
+.bignum small { display: block; font-size: 12.5px; font-weight: 500; color: var(--ink-3); font-family: var(--font-body); margin-top: 4px; }
+.verdict p { color: var(--ink-2); font-size: 14px; }
+.rule { font-size: 13px; color: var(--ink-3); border-top: 1px solid var(--rule); padding-top: 6px; margin-top: 4px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--ink-2); }
+.facts b { font-family: var(--font-display); font-size: 18px; color: var(--ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; }
+
+/* classical vs quantum */
+.ways { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+@media (max-width: 860px) { .ways { grid-template-columns: minmax(0, 1fr); } }
+.way { border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 8px; border: 1.5px solid var(--rule); min-width: 0; }
+.way.mc { border-top: 5px solid var(--mc); } .way.qq { border-top: 5px solid var(--q); }
+.way h3 { font-size: 17px; }
+.way.mc h3 { color: var(--mc); } .way.qq h3 { color: var(--q); }
+.way p { font-size: 14px; color: var(--ink-2); }
+.need { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--rule); padding-top: 8px; margin-top: auto; }
+.need .n { font-family: var(--font-display); font-weight: 800; font-size: 30px; font-variant-numeric: tabular-nums; }
+.way.mc .need .n { color: var(--mc); } .way.qq .need .n { color: var(--q); }
+.need span { font-size: 13px; color: var(--ink-3); }
+.ratio { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 10px 14px; border-radius: 10px; background: color-mix(in srgb, var(--q) 9%, var(--panel)); }
+.ratio .n { font-family: var(--font-display); font-weight: 800; font-size: 34px; color: var(--q); }
+.try { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.try select { border: 1.5px solid var(--ink); border-radius: 8px; padding: 4px 8px; background: var(--panel); }
+.calls { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+@media (max-width: 700px) { .calls { grid-template-columns: minmax(0, 1fr); } }
+.call { display: flex; flex-direction: column; gap: 2px; font-size: 14px; color: var(--ink-2); }
+.call b { color: var(--ink); }
+
+details.circ { border: 1px solid var(--rule); border-radius: 12px; background: var(--panel); padding: 12px 14px; }
+details.circ summary { cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 16px; }
+.circgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 280px); gap: 14px; align-items: start; margin-top: 10px; }
+@media (max-width: 860px) { .circgrid { grid-template-columns: minmax(0, 1fr); } }
+
+/* svg */
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.grid { stroke: var(--gridline); stroke-width: 1; }
+.tick { font-size: 11px; fill: var(--ink-3); font-family: var(--font-mono); }
+.axlab { font-size: 11.5px; fill: var(--ink-2); font-family: var(--font-body); }
+.lab { font-size: 12.5px; fill: var(--ink); font-family: var(--font-body); }
+.limit { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.limlab { font-size: 11px; fill: var(--ink); font-family: var(--font-mono); }
+.ln { fill: none; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.ln.plan { stroke: var(--plan); } .ln.ref { stroke: var(--ref); stroke-width: 2; }
+.now { stroke: var(--plan); stroke-width: 1; stroke-dasharray: 2 3; }
+.fp { fill: var(--plan); } .fq { fill: var(--q); } .fmc { fill: var(--mc); } .fref { fill: var(--ref); } .fbad { fill: var(--bad); } .fok { fill: var(--ok); }
+.sq { fill: var(--gridline); } .sqbad { fill: var(--bad); }
+.ring { fill: var(--panel); stroke: var(--plan); stroke-width: 2.5; }
+.band.mc { fill: color-mix(in srgb, var(--mc) 45%, transparent); } .band.qq { fill: color-mix(in srgb, var(--q) 50%, transparent); }
+.seg { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 8px; overflow: hidden; }
+.seg button { font-family: var(--font-mono); font-size: 12px; background: var(--panel); border: 0; padding: 4px 10px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.truth { stroke: var(--ok); stroke-width: 2; }
+footer .wrap { padding-block: 6px 28px; font-size: 12.5px; color: var(--ink-3); }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <h1>Lights On, Oil Off</h1>
+    <p><b>The idea:</b> Newfoundland can retire Holyrood’s oil plant without a new diesel turbine, as long as the power link from Labrador stays reliable. Proving a plan is safe means estimating a rare blackout risk, and a quantum computer can do that with far fewer simulation runs than the classical method.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="panel" aria-labelledby="sh">
+    <div class="row-head"><h2 id="sh">1 · Pick a situation</h2><span class="note">A plan passes if the island would be short of power for at most 2.8 hours in an average year (NL Hydro’s rule).</span></div>
+    <div class="sits" id="sits"></div>
+  </section>
+
+  <section class="work" aria-label="Plan and result">
+    <div class="panel">
+      <h2>2 · The plan</h2>
+      <div class="slider">
+        <label for="q">How often the Labrador link is down</label><span class="val" id="qVal">1.1%</span>
+        <input type="range" id="q" min="5" max="60" value="11" step="1">
+        <p class="note">1.1% was last year. NL Hydro plans for 5%.</p>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="actions"><button class="btn" type="button" id="findAny">Cheapest plan that passes</button><button class="btn" type="button" id="findNo">Same, without the turbine</button></div>
+      <p class="note" id="planMsg"></p>
+    </div>
+
+    <div class="panel">
+      <div class="verdict" id="verdict">
+        <div class="bignum" id="lolh"></div>
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+          <span class="status" id="status"></span>
+          <p id="vline"></p>
+          <p class="rule">Pass means at most 2.8 hours a year without enough power, NL Hydro’s reliability rule. Fail means more.</p>
+        </div>
+      </div>
+      <div class="facts"><span>Cost <b id="tCost"></b> a year</span><span>CO₂ <b id="tCo2"></b> a year</span><span id="tBe"></span></div>
+      <div>
+        <h3 style="font-size:14px;margin-bottom:4px">What if the link is down more often?</h3>
+        <div class="legend"><span><i style="background:var(--plan)"></i>this plan</span><span><i style="background:var(--ref)"></i>Hydro’s plan (Unit 8 + diesel turbine)</span><span><i style="background:var(--ink)"></i>pass line, 2.8 h</span></div>
+        <div class="chart" id="cLink"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="vh">
+    <h2 id="vh">3 · How do we know it passes? Classical vs quantum</h2>
+    <p style="max-width:90ch;color:var(--ink-2)">Nobody can observe next winter, so blackout hours have to be <b>estimated by simulation</b>. The hard part: blackouts are rare, so you need many runs before you can say on which side of the 2.8-hour line a plan sits. Both methods estimate the same number for this plan.</p>
+    <div class="ways">
+      <div class="way mc">
+        <h3>Classical way: Monte Carlo</h3>
+        <p><b>Simulate random winter hours one at a time</b> (weather, demand, which plants break) and count how many are short of power.</p>
+        <div class="chart" id="cDots"></div>
+        <p id="mcText"></p>
+        <div class="need"><span class="n" id="needMc"></span><span>runs to be sure if it passes</span></div>
+      </div>
+      <div class="way qq">
+        <h3>Quantum way: amplitude estimation</h3>
+        <p><b>Put every possible hour into one quantum state at once</b>, then repeat a “boost” that makes the short-of-power hours more likely to show up. Measuring how fast they grow tells you how rare they are.</p>
+        <div class="chart" id="cBoost"></div>
+        <p id="qText"></p>
+        <div class="need"><span class="n" id="needQ"></span><span>runs to be sure if it passes</span></div>
+      </div>
+    </div>
+    <div class="ratio"><span class="n" id="ratio"></span><p id="ratioTxt"></p></div>
+    <h3 style="font-size:15px">Try it: give each method the same number of runs</h3>
+    <div class="try">
+      <label for="budget">Runs:</label>
+      <select id="budget"><option value="1000">1,000</option><option value="4000" selected>4,000</option><option value="16000">16,000</option></select>
+      <button class="btn primary" type="button" id="go">Estimate this plan</button>
+    </div>
+    <div class="chart" id="cTry"></div>
+    <div class="calls">
+      <div class="call" id="callMc"></div>
+      <div class="call" id="callQ"></div>
+    </div>
+    <p class="note">The bar is the range each method can vouch for (about 95% sure). If the whole bar is left of the line, the plan passes; right of it, it fails; if it crosses the line, you can’t tell yet and need more runs. The quantum side is simulated as an ideal quantum computer; on IBM’s real chip today a small version of this circuit only ties Monte Carlo.</p>
+  </section>
+
+
+  <section class="panel" aria-labelledby="bh" id="bottleneck">
+    <div class="row-head"><h2 id="bh">4 · Where normal computers struggle: a 3-day cold snap</h2>
+      <div class="seg" role="group" aria-label="Link down" id="csLink"><button type="button" data-l="1.1%" aria-pressed="false">link down 1.1%</button><button type="button" data-l="5%" aria-pressed="true">5%</button></div></div>
+    <p style="max-width:92ch;color:var(--ink-2)">In a real cold snap, a broken plant can stay broken for days. Then there is no exact shortcut: every plant’s history has to be followed day by day, and the possibilities double with every plant and every day. Planners fall back on Monte Carlo. Here the quantum method checks four plans through the winter’s worst 3-day cold snap, using the real 22-qubit circuits, with the same number of runs as Monte Carlo. A plan is safe if the chance of a day short of power stays under 10% (about one day in ten years).</p>
+    <div class="legend"><span><i style="background:var(--ink)"></i>exact answer</span><span><i style="background:var(--mc)"></i>Monte Carlo range</span><span><i style="background:var(--q)"></i>quantum range</span><span><i style="background:var(--bad)"></i>safe line, 10%</span></div>
+    <div class="chart" id="cCold"></div>
+    <div class="ratio"><span class="n" id="csHead"></span><p id="csTxt"></p></div>
+  </section>
+
+  <details class="circ">
+    <summary>5 · Look inside the quantum circuit we ran on IBM’s ibm_quebec</summary>
+    <p class="note" style="margin-top:8px">A 3-qubit version of one real case (2030, Holyrood retired, nothing added, link down 5%). Qubit 0: high-demand hour. Qubit 1: link down. Qubit 2: short of power. Move the slider to apply boosts; the bars are the chance of each of the 8 combinations, simulated exactly in your browser.</p>
+    <div class="circgrid">
+      <div class="chart" id="cAmps"></div>
+      <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+        <label for="m" style="font-weight:700">Boosts: <span id="mVal" class="mono">0</span></label>
+        <input type="range" id="m" min="0" max="6" value="0" step="1">
+        <p class="call"><span class="k">Chance qubit 2 reads “short”</span><b id="pFlag" style="font-size:22px;font-family:var(--font-display)"></b><span id="pChip" class="note"></span></p>
+      </div>
+    </div>
+  </details>
+</main>
+
+<footer>
+  <div class="wrap"><p>Numbers come from the project’s grid model (an AI demand model trained on 373,000 real readings, 46 winters of weather, NL Hydro’s plant data), which matches NL Hydro’s own reliability numbers within about 10%. All 4,096 plans were scored exactly. Costs: NL Hydro filings for the turbine, Unit 8 and batteries; other prices are stated assumptions. The model checks capacity only. Real-chip jobs: <span class="mono" id="jobs"></span>.</p></div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  'use strict';
+  const $ = (s) => document.querySelector(s);
+  const NS = 'http://www.w3.org/2000/svg';
+  const LIMIT = 2.8, HOURS = 2904;
+  const P = DATA.plans, N = P.a.length;
+  const fmt = (n, d = 0) => Number(n).toLocaleString('en-CA', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const money = (v) => (v < 0 ? '−$' : '$') + fmt(Math.abs(v), 0) + 'M';
+  const nice = (v) => { const e = Math.pow(10, Math.floor(Math.log10(v)) - 1); return fmt(Math.round(v / e) * e); };
+  const pct = (v) => (v * 100).toFixed(1) + '%';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) { if (attrs[k] == null) continue; if (k === 'text') e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  const svg = (host, W, H, label) => { host.innerHTML = ''; return el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': label }, host); };
+  const lin = (d0, d1, r0, r1) => (v) => r0 + (v - d0) / (d1 - d0) * (r1 - r0);
+  const ICON_OK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const ICON_BAD = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>';
+
+  /* ------------------------------------------------------------ plans (bit order of the saved table) */
+  const BIT = { ct: 0, u8: 1, wa: 2, wb: 3, ww: 4, b1: 5, b2: 6, h1: 7, h2: 8, o1: 9, o2: 10, dr: 11 };
+  const OPTS = [
+    ['ct', 'Diesel turbine', '150 MW', 'Firm power'], ['u8', 'Unit 8 hydro', '150 MW', 'Firm power'],
+    ['wa', 'Avalon', '', 'Wind, 100 MW each'], ['wb', 'Burin', '', 'Wind, 100 MW each'], ['ww', 'West coast', '', 'Wind, 100 MW each'],
+    ['b1', 'Battery', '25 MW', 'Peak help'], ['b2', 'Battery', '50 MW', 'Peak help'], ['dr', 'Thermostats', '40 MW', 'Peak help'],
+    ['h1', 'Baseboard', '15k homes', 'Heat pumps'], ['h2', 'Baseboard', '35k homes', 'Heat pumps'],
+    ['o1', 'Oil-heated', '10k homes', 'Heat pumps'], ['o2', 'Oil-heated', '30k homes', 'Heat pumps']];
+  const bitsOf = (keys) => keys.reduce((s, k) => s | (1 << BIT[k]), 0);
+  const HYDRO = bitsOf(['ct', 'u8']);
+  const lolh = (i, q) => P.a[i] + P.b[i] * q;
+  const blackoutCost = (L) => 10 * L + 100 * Math.max(0, L - LIMIT);
+  const net = (i, q) => P.build[i] - P.wind[i] - P.bills[i] + P.carbon[i] + blackoutCost(lolh(i, q));
+  const breakEven = (i) => (P.b[i] > 0 ? (LIMIT - P.a[i]) / P.b[i] : (P.a[i] <= LIMIT ? Infinity : -Infinity));
+  function best(test, key) { let bi = -1, bv = Infinity; for (let i = 0; i < N; i++) { if (!test(i)) continue; const v = key(i); if (v < bv) { bv = v; bi = i; } } return bi; }
+  const cheapest = (q, noTurbine) => best((i) => (!noTurbine || !(i & 1)) && lolh(i, q) <= LIMIT, (i) => net(i, q));
+  const strongestNo = (q) => best((i) => !(i & 1), (i) => lolh(i, q));
+
+  const SITS = [
+    { t: 'Switch the oil off, build nothing', d: 'Retire Holyrood and add nothing. Link down 1.1%.', q: 0.011, plan: () => 0 },
+    { t: 'Hydro’s plan', d: 'Unit 8 and a new diesel turbine. Link down 1.1%, like last year.', q: 0.011, plan: () => HYDRO },
+    { t: 'Hydro’s plan, Hydro’s worry', d: 'The same two projects if the link is down 5%, as Hydro plans for.', q: 0.05, plan: () => HYDRO },
+    { t: 'No new diesel', d: 'Cheapest plan without the turbine that passes. Link down 1.1%.', q: 0.011, plan: (q) => cheapest(q, true) },
+    { t: 'No new diesel, bad link year', d: 'Everything except the turbine, with the link down 3.5%.', q: 0.035, plan: (q) => strongestNo(q) },
+    { t: 'Heat pumps alone', d: '90,000 heat pumps and smart thermostats, no new supply. Link down 1.1%.', q: 0.011, plan: () => bitsOf(['h1', 'h2', 'o1', 'o2', 'dr']) },
+    { t: 'Cheapest plan that survives 5%', d: 'If you plan for Hydro’s 5%, the cheapest plan that still passes.', q: 0.05, plan: (q) => cheapest(q, false) },
+    { t: 'Belt and braces', d: 'Everything useful plus the turbine. Link down 5%.', q: 0.05, plan: () => strongestNo(0.035) | 1 }];
+
+  let plan = 0, q = 0.011, active = 3;
+  SITS.forEach((s, k) => {
+    s.i = s.plan(s.q);
+    const ok = lolh(s.i, s.q) <= LIMIT;
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'sit'; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<b>${s.t}</b><span class="badge ${ok ? 'ok' : 'bad'}">${ok ? 'passes' : 'fails'}</span><span class="d">${s.d}</span>`;
+    b.addEventListener('click', () => choose(k));
+    $('#sits').appendChild(b); s.btn = b;
+  });
+  function choose(k) { active = k; const s = SITS[k]; q = s.q; $('#q').value = Math.round(q * 1000); plan = s.i; $('#planMsg').textContent = s.d; update(); }
+
+  let lastGroup = '';
+  OPTS.forEach((o) => {
+    if (o[3] !== lastGroup) { const g = document.createElement('span'); g.className = 'k g'; g.textContent = o[3]; $('#chips').appendChild(g); lastGroup = o[3]; }
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.id = 'c_' + o[0];
+    b.innerHTML = `<b>${o[1]}</b>${o[2] ? `<span>${o[2]}</span>` : ''}`;
+    b.addEventListener('click', () => { plan ^= (1 << BIT[o[0]]); $('#planMsg').textContent = 'Your own plan.'; update(); });
+    $('#chips').appendChild(b);
+  });
+  $('#findAny').addEventListener('click', () => { const i = cheapest(q, false); if (i >= 0) { plan = i; $('#planMsg').textContent = `Cheapest of all 4,096 plans that passes with the link down ${pct(q)}.`; } update(); });
+  $('#findNo').addEventListener('click', () => { const i = cheapest(q, true); if (i >= 0) { plan = i; $('#planMsg').textContent = `Cheapest plan without the turbine that passes with the link down ${pct(q)}.`; } else { plan = strongestNo(q); $('#planMsg').textContent = `No plan without the turbine passes with the link down ${pct(q)}. This is the closest one.`; } update(); });
+  const qIn = $('#q');
+  qIn.addEventListener('input', () => { q = +qIn.value / 1000; update(); });
+
+  let timer = null, lastKey = '';
+  function update() {
+    $('#qVal').textContent = pct(q);
+    OPTS.forEach((o) => $('#c_' + o[0]).setAttribute('aria-pressed', String(!!(plan & (1 << BIT[o[0]])))));
+    SITS.forEach((s, k) => s.btn.setAttribute('aria-pressed', String(k === active && s.i === plan && Math.abs(s.q - q) < 1e-9)));
+    const L = lolh(plan, q), ok = L <= LIMIT, be = breakEven(plan);
+    $('#verdict').classList.toggle('fail', !ok);
+    $('#lolh').innerHTML = `${fmt(L, 1)}<small>hours a year<br>short of power</small>`;
+    $('#status').innerHTML = ok ? ICON_OK + 'Passes: the lights stay on' : ICON_BAD + 'Fails: too many blackouts';
+    $('#vline').textContent = ok ? `With the link down ${pct(q)} of the time, this plan stays under the 2.8-hour line.` : `With the link down ${pct(q)} of the time, this plan goes over the 2.8-hour line.`;
+    $('#tCost').textContent = money(net(plan, q));
+    $('#tCo2').textContent = (P.co2[plan] > 0 ? '+' : P.co2[plan] < 0 ? '−' : '±') + fmt(Math.abs(P.co2[plan])) + ' kt';
+    $('#tBe').innerHTML = be === Infinity ? 'Passes however often the link is down' : be <= 0 ? 'Fails even with a perfect link'
+      : `Passes until the link is down <b>${(be * 100).toFixed(1)}%</b>`;
+    drawLink();
+    const key = plan + ':' + q;
+    if (key !== lastKey) { lastKey = key; clearTimeout(timer); timer = setTimeout(compare, 120); }
+  }
+
+  function drawLink() {
+    const host = $('#cLink'), W = 640, H = 250, m = { l: 36, r: 12, t: 8, b: 30 };
+    const s = svg(host, W, H, 'Blackout hours as the link is down more often');
+    const x = lin(0.5, 6, m.l, W - m.r);
+    const top = Math.max(6, Math.min(30, Math.ceil(Math.max(lolh(plan, 0.06), lolh(HYDRO, 0.06)) / 2) * 2));
+    const y = lin(0, top, H - m.b, m.t);
+    const yt = top <= 12 ? [0, 2, 4, 6, 8, 10, 12].filter((v) => v <= top) : [0, 5, 10, 15, 20, 25, 30].filter((v) => v <= top);
+    yt.forEach((v) => { el('line', { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), class: 'grid' }, s); el('text', { x: m.l - 5, y: y(v) + 4, 'text-anchor': 'end', class: 'tick', text: v + 'h' }, s); });
+    [1, 2, 3, 4, 5, 6].forEach((v) => el('text', { x: x(v), y: H - m.b + 15, 'text-anchor': 'middle', class: 'tick', text: v + '%' }, s));
+    el('text', { x: (m.l + W - m.r) / 2, y: H - 2, 'text-anchor': 'middle', class: 'axlab', text: 'how often the Labrador link is down' }, s);
+    el('line', { x1: m.l, x2: W - m.r, y1: y(LIMIT), y2: y(LIMIT), class: 'limit' }, s);
+    const defs = el('defs', {}, s); const cp = el('clipPath', { id: 'clipLink' }, defs); el('rect', { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b }, cp);
+    const seg = (i) => [0.005, 0.06].map((qq, k) => (k ? 'L' : 'M') + x(qq * 100) + ',' + y(lolh(i, qq))).join(' ');
+    el('path', { d: seg(HYDRO), class: 'ln ref', 'clip-path': 'url(#clipLink)' }, s);
+    el('path', { d: seg(plan), class: 'ln plan', 'clip-path': 'url(#clipLink)' }, s);
+    el('line', { x1: x(q * 100), x2: x(q * 100), y1: m.t, y2: H - m.b, class: 'now' }, s);
+    const L = lolh(plan, q); if (L <= top) el('circle', { cx: x(q * 100), cy: y(L), r: 5, class: 'fp' }, s);
+    const be = breakEven(plan); if (isFinite(be) && be >= 0.005 && be <= 0.06) el('circle', { cx: x(be * 100), cy: y(LIMIT), r: 6, class: 'ring' }, s);
+  }
+
+  /* ------------------------------------------------------------ classical vs quantum */
+  function binom(n, p) {
+    if (p <= 0) return 0; if (p >= 1) return n;
+    if (n * Math.min(p, 1 - p) > 40) { let u = 0, v = 0; while (u === 0) u = Math.random(); while (v === 0) v = Math.random();
+      return Math.min(n, Math.max(0, Math.round(n * p + Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v) * Math.sqrt(n * p * (1 - p))))); }
+    let k = 0; for (let i = 0; i < n; i++) if (Math.random() < p) k++; return k;
+  }
+  function schedule(n) {
+    const powers = [0, 1]; let next = 2; const cost = (ps) => ps.reduce((s, m) => s + 2 * m + 1, 0);
+    while (Math.floor(n / cost([...powers, next])) >= 100) { powers.push(next); next *= 2; }
+    const shots = Math.floor(n / cost(powers)); return { powers, shots, used: shots * cost(powers) };
+  }
+  function mlae(hits, shots, powers) {
+    const G = 8000, ll = (th) => { let s = 0; for (let j = 0; j < powers.length; j++) { const pr = Math.min(1 - 1e-12, Math.max(1e-12, Math.sin((2 * powers[j] + 1) * th) ** 2)); s += hits[j] * Math.log(pr) + (shots - hits[j]) * Math.log(1 - pr); } return s; };
+    let bt = 0, bv = -Infinity; const step = Math.PI / 2 / G;
+    for (let g = 1; g < G; g++) { const th = g * step, v = ll(th); if (v > bv) { bv = v; bt = th; } }
+    const c = bt; for (let g = -60; g <= 60; g++) { const th = c + g * step / 60; if (th <= 0) continue; const v = ll(th); if (v > bv) { bv = v; bt = th; } }
+    return Math.sin(bt) ** 2;
+  }
+  const qaeTry = (p, sch) => { const th = Math.asin(Math.sqrt(p)); return mlae(sch.powers.map((m) => binom(sch.shots, Math.sin((2 * m + 1) * th) ** 2)), sch.shots, sch.powers); };
+  const qaeErr = (p, n, T = 10) => { const sch = schedule(n); let e = 0; for (let t = 0; t < T; t++) e += (qaeTry(p, sch) - p) ** 2; return [sch.used, Math.sqrt(e / T) / p]; };
+  const BUDGETS = [500, 1000, 2000, 4000, 8000, 16000, 32000, 64000];
+
+  function compare() {
+    const L = lolh(plan, q), p = L / HOURS;
+    const need = Math.max(Math.abs(L - LIMIT) / L / 2, 0.01);           // error that still keeps the estimate on one side of 2.8 h
+    const nMc = (1 - p) / (p * need * need);
+    const curve = BUDGETS.map((n) => qaeErr(p, n, 8));
+    let nQ = null;
+    for (let k = 0; k < curve.length && nQ === null; k++) if (curve[k][1] <= need) {
+      if (k === 0) nQ = curve[0][0] * curve[0][1] / need;
+      else { const [n0, e0] = curve[k - 1], [n1, e1] = curve[k]; nQ = Math.pow(10, Math.log10(n0) + (Math.log10(need) - Math.log10(e0)) * (Math.log10(n1) - Math.log10(n0)) / (Math.log10(e1) - Math.log10(e0))); }
+    }
+    if (nQ === null) { const [nl, e] = curve[curve.length - 1]; nQ = nl * e / need; }
+    $('#needMc').textContent = nice(nMc); $('#needQ').textContent = nice(nQ);
+    const r = nMc / nQ;
+    $('#ratio').textContent = (r >= 10 ? Math.round(r) : r.toFixed(1)) + '× fewer runs';
+    $('#ratioTxt').textContent = Math.abs(L - LIMIT) / L < 0.1
+      ? 'with quantum, on an ideal quantum computer. This plan sits close to the 2.8-hour line, so both need many runs, and quantum’s edge is largest.'
+      : 'with quantum, on an ideal quantum computer. The closer a plan is to the 2.8-hour line, the more runs both need and the bigger quantum’s edge.';
+    drawDots(p); drawBoost(p);
+    $('#mcText').textContent = `For this plan, about 1 simulated hour in ${nice(1 / p)} is short of power: the red squares above, out of 2,000. Most runs teach you nothing.`;
+    const th = Math.asin(Math.sqrt(p)); let mBig = 0; for (const m of [1, 2, 4, 8, 16, 32]) { mBig = m; if (Math.sin((2 * m + 1) * th) ** 2 > 0.3) break; }
+    $('#qText').textContent = `With no boost, a short-of-power result shows up ${p < 0.01 ? (p * 100).toFixed(2) + '%' : pct(p)} of the time. After ${mBig} boosts it shows up ${Math.round(Math.sin((2 * mBig + 1) * th) ** 2 * 100)}% of the time, so every run carries more information.`;
+    tryIt();
+  }
+  function drawDots(p) {
+    const host = $('#cDots'), cols = 100, rows = 20, c = 5.5, W = cols * c, H = rows * c;
+    const s = svg(host, W, H, '2,000 simulated hours with the short-of-power ones in red');
+    const red = Math.max(0, Math.round(2000 * p)); const picks = new Set();
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    while (picks.size < Math.min(red, 2000)) picks.add(Math.floor(rnd() * 2000));
+    for (let i = 0; i < 2000; i++) el('rect', { x: (i % cols) * c, y: Math.floor(i / cols) * c, width: c - 1.5, height: c - 1.5, rx: 1, class: picks.has(i) ? 'sqbad' : 'sq' }, s);
+  }
+  function drawBoost(p) {
+    const host = $('#cBoost'), W = 520, H = 162, m = { l: 34, r: 8, t: 12, b: 28 };
+    const s = svg(host, W, H, 'Chance of a short-of-power result after each number of boosts');
+    const th = Math.asin(Math.sqrt(p)), ms = [0, 1, 2, 4, 8, 16, 32].filter((mm) => (2 * mm + 1) * th < Math.PI / 2 + 0.2);
+    const y = lin(0, 1, H - m.b, m.t), bw = (W - m.l - m.r) / ms.length;
+    [0, 0.5, 1].forEach((v) => { el('line', { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), class: 'grid' }, s); el('text', { x: m.l - 5, y: y(v) + 4, 'text-anchor': 'end', class: 'tick', text: Math.round(v * 100) + '%' }, s); });
+    ms.forEach((mm, k) => {
+      const v = Math.sin((2 * mm + 1) * th) ** 2, x0 = m.l + k * bw + bw * 0.2;
+      el('rect', { x: x0, y: y(v), width: bw * 0.6, height: Math.max(1, y(0) - y(v)), rx: 3, class: 'fq' }, s);
+      el('text', { x: x0 + bw * 0.3, y: y(v) - 4, 'text-anchor': 'middle', class: 'tick', text: v < 0.01 ? (v * 100).toFixed(2) + '%' : Math.round(v * 100) + '%' }, s);
+      el('text', { x: x0 + bw * 0.3, y: H - m.b + 15, 'text-anchor': 'middle', class: 'tick', text: mm }, s);
+    });
+    el('text', { x: (m.l + W - m.r) / 2, y: H - 2, 'text-anchor': 'middle', class: 'axlab', text: 'boosts' }, s);
+  }
+
+  /* try it: both methods with the same runs, shown against the 2.8 h line */
+  function tryIt() {
+    const L = lolh(plan, q), p = L / HOURS, n = +$('#budget').value;
+    const k = binom(n, p), ph = k / n, sd = Math.sqrt(Math.max(ph, 1 / n) * (1 - ph) / n);
+    const mc = { est: ph * HOURS, lo: Math.max(0, ph - 2 * sd) * HOURS, hi: (ph + 2 * sd) * HOURS };
+    const [used, rel] = qaeErr(p, n, 8), est = qaeTry(p, schedule(n)) * HOURS;
+    const qq = { est, lo: Math.max(0, est - 2 * rel * L), hi: est + 2 * rel * L };
+    const call = (r) => (r.hi < LIMIT ? ['passes', 'ok'] : r.lo > LIMIT ? ['fails', 'bad'] : ['can’t tell yet', 'unsure']);
+    const host = $('#cTry'), W = 900, H = 120, m = { l: 120, r: 16, t: 10, b: 26 };
+    const s = svg(host, W, H, 'Each method’s estimate and range against the 2.8-hour line');
+    const hiX = Math.max(LIMIT * 1.6, L * 2, Math.min(mc.hi, L * 4) * 1.05), x = lin(0, hiX, m.l, W - m.r);
+    const step = hiX > 20 ? 5 : hiX > 8 ? 2 : 1;
+    for (let v = 0; v <= hiX + 1e-9; v += step) { el('line', { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, class: 'grid' }, s); el('text', { x: x(v), y: H - m.b + 15, 'text-anchor': 'middle', class: 'tick', text: v + 'h' }, s); }
+    [['Monte Carlo', mc, 'mc', 'fmc', m.t + 22], ['Quantum', qq, 'qq', 'fq', m.t + 62]].forEach(([name, r, band, dot, yy]) => {
+      el('text', { x: m.l - 12, y: yy + 4, 'text-anchor': 'end', class: 'lab', text: name }, s);
+      el('rect', { x: x(Math.min(r.lo, hiX)), y: yy - 9, width: Math.max(2, x(Math.min(r.hi, hiX)) - x(Math.min(r.lo, hiX))), height: 18, rx: 9, class: 'band ' + band }, s);
+      el('circle', { cx: x(Math.min(r.est, hiX)), cy: yy, r: 6, class: dot }, s);
+    });
+    el('line', { x1: x(LIMIT), x2: x(LIMIT), y1: m.t - 4, y2: H - m.b, class: 'limit' }, s);
+    el('text', { x: x(LIMIT) + 5, y: m.t + 4, class: 'limlab', text: 'pass line 2.8 h' }, s);
+    const [cm, km] = call(mc), [cq, kq] = call(qq);
+    $('#callMc').innerHTML = `<span><span class="badge ${km}">${cm}</span></span><span><b>Monte Carlo</b> with ${fmt(n)} runs: about ${fmt(mc.est, 1)} h, somewhere between ${fmt(mc.lo, 1)} and ${fmt(mc.hi, 1)} h.</span>`;
+    $('#callQ').innerHTML = `<span><span class="badge ${kq}">${cq}</span></span><span><b>Quantum</b> with ${fmt(used)} runs: about ${fmt(qq.est, 1)} h, somewhere between ${fmt(qq.lo, 1)} and ${fmt(qq.hi, 1)} h.</span>`;
+  }
+  $('#go').addEventListener('click', tryIt);
+  $('#budget').addEventListener('change', tryIt);
+
+  /* ------------------------------------------------------------ 3-qubit statevector (the circuit run on ibm_quebec) */
+  const R = DATA.circuit.reduction;
+  const ang = (p) => 2 * Math.asin(Math.sqrt(Math.min(1, Math.max(0, p))));
+  const pOut = [R.p_out['0'], R.p_out['1']], cond = (a, b) => R.cond[`(${a}, ${b})`], bit = (i, k) => (i >> k) & 1;
+  function ry(st, t, angleFor) { const out = st.slice(); for (let i = 0; i < 8; i++) { if (bit(i, t)) continue; const j = i | (1 << t), a = angleFor(i) / 2, c = Math.cos(a), s = Math.sin(a); out[i] = c * st[i] - s * st[j]; out[j] = s * st[i] + c * st[j]; } return out; }
+  const A = (st, sign) => sign > 0
+    ? ry(ry(ry(st, 0, () => ang(R.p_cold)), 1, (i) => ang(pOut[bit(i, 0)])), 2, (i) => ang(cond(bit(i, 0), bit(i, 1))))
+    : ry(ry(ry(st, 2, (i) => -ang(cond(bit(i, 0), bit(i, 1)))), 1, (i) => -ang(pOut[bit(i, 0)])), 0, () => -ang(R.p_cold));
+  const xAll = (st) => st.map((_, i) => st[i ^ 7]);
+  const h2 = (st) => { const out = st.slice(), r = Math.SQRT1_2; for (let i = 0; i < 4; i++) { out[i] = r * (st[i] + st[i | 4]); out[i | 4] = r * (st[i] - st[i | 4]); } return out; };
+  const ccx = (st) => { const out = st.slice(); out[3] = st[7]; out[7] = st[3]; return out; };
+  const z2 = (st) => st.map((v, i) => (bit(i, 2) ? -v : v));
+  const boost = (st) => A(xAll(h2(ccx(h2(xAll(A(z2(st), -1)))))), 1);
+  const states = []; { let st = A([1, 0, 0, 0, 0, 0, 0, 0], 1); for (let k = 0; k <= 6; k++) { states.push(st); st = boost(st); } }
+  const NAMES = (i) => `${bit(i, 0) ? 'high demand' : 'normal hour'} · ${bit(i, 1) ? 'link down' : 'link up'} · ${bit(i, 2) ? 'short' : 'ok'}`;
+  function drawAmps(k) {
+    const probs = states[k].map((a) => a * a), host = $('#cAmps'), W = 600, rowH = 22, H = 8 * rowH + 24, ml = 220;
+    const s = svg(host, W, H, `Chance of each of the 8 combinations after ${k} boosts`);
+    const x = lin(0, 1, ml, W - 60);
+    [0, 0.5, 1].forEach((v) => { el('line', { x1: x(v), x2: x(v), y1: 2, y2: 8 * rowH + 2, class: 'grid' }, s); el('text', { x: x(v), y: 8 * rowH + 18, 'text-anchor': 'middle', class: 'tick', text: Math.round(v * 100) + '%' }, s); });
+    for (let i = 0; i < 8; i++) {
+      const y0 = 2 + i * rowH;
+      el('text', { x: ml - 8, y: y0 + 15, 'text-anchor': 'end', class: 'axlab', text: NAMES(i) }, s);
+      el('rect', { x: x(0), y: y0 + 4, width: Math.max(1, x(probs[i]) - x(0)), height: 14, rx: 3, class: bit(i, 2) ? 'fq' : 'fref' }, s);
+    }
+    const pf = probs.reduce((sum, v, i) => sum + (bit(i, 2) ? v : 0), 0);
+    $('#mVal').textContent = k; $('#pFlag').textContent = (pf * 100).toFixed(1) + '%';
+    $('#pChip').textContent = k <= 4 ? `Measured on ibm_quebec: ${(DATA.circuit.run2[k] * 100).toFixed(1)}% (after calibration).` : 'We ran 0 to 4 boosts on the real chip.';
+  }
+  const mIn = $('#m'); mIn.addEventListener('input', () => drawAmps(+mIn.value));
+  $('#jobs').textContent = DATA.circuit.jobs.join(', ');
+
+
+  /* ------------------------------------------------------------ the bottleneck: cold snaps */
+  (function cold() {
+    const C = DATA.coldsnap; if (!C) { $('#bottleneck').hidden = true; return; }
+    let link = '5%';
+    const short = { "Hydro's plan: Unit 8 + turbine": 'Hydro’s plan', 'cheapest plan without the turbine': 'Cheapest, no turbine', 'strongest plan without the turbine': 'Strongest, no turbine', 'same, plus the turbine': 'Strongest + turbine' };
+    function draw() {
+      const cases = C.cases.filter((c) => c.link === link);
+      const host = $('#cCold'), W = 900, rowH = 46, m = { l: 170, r: 20, t: 8, b: 28 }, H = m.t + m.b + rowH * cases.length;
+      const s = svg(host, W, H, 'Exact answer, Monte Carlo range and quantum range for four plans in a 3-day cold snap');
+      const hi = Math.max(C.safe * 1.6, ...cases.map((c) => c.p_exact + 2.5 * c.mc_sd)), x = lin(0, hi, m.l, W - m.r);
+      const step = hi > 0.3 ? 0.1 : hi > 0.12 ? 0.05 : 0.02;
+      for (let v = 0; v <= hi + 1e-9; v += step) { el('line', { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, class: 'grid' }, s); el('text', { x: x(v), y: H - m.b + 15, 'text-anchor': 'middle', class: 'tick', text: Math.round(v * 100) + '%' }, s); }
+      cases.forEach((c, i) => {
+        const y0 = m.t + i * rowH + rowH / 2;
+        el('text', { x: m.l - 12, y: y0 + 4, 'text-anchor': 'end', class: 'lab', text: short[c.plan] }, s);
+        el('rect', { x: x(Math.max(0, c.p_exact - 2 * c.mc_sd)), y: y0 - 15, width: x(c.p_exact + 2 * c.mc_sd) - x(Math.max(0, c.p_exact - 2 * c.mc_sd)), height: 10, rx: 5, class: 'band mc' }, s);
+        el('rect', { x: x(Math.max(0, c.qae_mean - 2 * c.qae_sd)), y: y0 + 5, width: Math.max(3, x(c.qae_mean + 2 * c.qae_sd) - x(Math.max(0, c.qae_mean - 2 * c.qae_sd))), height: 10, rx: 5, class: 'band qq' }, s);
+        el('line', { x1: x(c.p_exact), x2: x(c.p_exact), y1: y0 - 19, y2: y0 + 19, stroke: 'currentColor', 'stroke-width': 2.5 }, s);
+      });
+      el('line', { x1: x(C.safe), x2: x(C.safe), y1: m.t, y2: H - m.b, stroke: 'var(--bad)', 'stroke-width': 1.5, 'stroke-dasharray': '5 4' }, s);
+      const ratios = cases.map((c) => c.mc_sd / c.qae_sd).sort((a, b) => a - b), med = ratios[Math.floor(ratios.length / 2)];
+      const hard = cases.reduce((a, c) => (Math.abs(c.p_exact - C.safe) < Math.abs(a.p_exact - C.safe) ? c : a));
+      const right = (calls, truth) => Math.round(100 * calls[truth] / (calls.safe + calls.unsafe + calls.unsure));
+      $('#csHead').textContent = med.toFixed(1) + '× more precise';
+      $('#csTxt').textContent = `quantum, with the same ${fmt(C.runs)} runs, landing on the exact answer for every plan. ` +
+        (Math.abs(hard.p_exact - C.safe) < 0.02
+          ? `The hardest call is ${short[hard.plan]} at ${(hard.p_exact * 100).toFixed(1)}%, just under the 10% line: quantum got it right in ${right(hard.qae_calls, hard.truth)}% of tries, Monte Carlo in ${right(hard.mc_calls, hard.truth)}%.`
+          : 'All four plans are far from the line here, so both methods make the right call.') + ' Simulated perfect quantum computer.';
+    }
+    document.querySelectorAll('#csLink button').forEach((b) => b.addEventListener('click', () => { document.querySelectorAll('#csLink button').forEach((x) => x.setAttribute('aria-pressed', String(x === b))); link = b.dataset.l; draw(); }));
+    draw();
+  })();
+
+  choose(3);
+  drawAmps(0);
+})();
+</script>

@@ -1,0 +1,10 @@
+Downtown         K4: best mix_flip line_fit x1.46 circuit_fit x1.08 line_fit_flip x1.87 circuit_fit_flip x1.85 | K16: best mix_flip line_fit x1.05 circuit_fit x0.90 line_fit_flip x1.24 circuit_fit_flip x1.21  [130s]
+Georgestown      K4: best uniform line_fit x1.91 circuit_fit x0.99 line_fit_flip x1.45 circuit_fit_flip x0.77 | K16: best uniform line_fit x3.01 circuit_fit x2.07 line_fit_flip x2.83 circuit_fit_flip x2.14  [212s]
+Churchill Park   K4: best mix_flip line_fit x3.25 circuit_fit x2.63 line_fit_flip x2.61 circuit_fit_flip x2.20 | K16: best mix_flip line_fit x2.61 circuit_fit x2.06 line_fit_flip x2.09 circuit_fit_flip x1.88  [301s]
+Cowan Heights    K4: best mix_flip line_fit x2.11 circuit_fit x1.15 line_fit_flip x6.37 circuit_fit_flip x6.22 | K16: best mix_flip line_fit x2.52 circuit_fit x1.51 line_fit_flip x4.74 circuit_fit_flip x4.62  [385s]
+Clovelly Trails  K4: best mix_flip line_fit x2.78 circuit_fit x2.42 line_fit_flip x2.25 circuit_fit_flip x2.26 | K16: best mix_flip line_fit x2.36 circuit_fit x2.03 line_fit_flip x2.55 circuit_fit_flip x2.38  [452s]
+White Hills      K4: best mix_flip line_fit x1.68 circuit_fit x1.08 line_fit_flip x2.15 circuit_fit_flip x1.69 | K16: best mix_flip line_fit x1.80 circuit_fit x1.20 line_fit_flip x2.41 circuit_fit_flip x2.05  [513s]
+
+median ratio to best classical (min, wins / instances):
+  K=  4: line_fit x2.01 (min x1.46, 6/6)  circuit_fit x1.11 (min x0.99, 5/6)  line_fit_flip x2.20 (min x1.45, 6/6)  circuit_fit_flip x2.03 (min x0.77, 5/6)
+  K= 16: line_fit x2.44 (min x1.05, 6/6)  circuit_fit x1.77 (min x0.90, 5/6)  line_fit_flip x2.48 (min x1.24, 6/6)  circuit_fit_flip x2.09 (min x1.21, 6/6)

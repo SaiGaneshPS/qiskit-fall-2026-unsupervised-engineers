@@ -1,0 +1,18 @@
+<section id="circuit" data-transition="fade" style="background:#14213D;color:#F7F5F0;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">Every blackout scenario in one quantum state</h2>
+<div style="display:flex;gap:56px;align-items:start">
+<img src="/_blob/d14da0c81a61fa2801fbfa976e5377ad" alt="Qiskit drawing of the state-preparation circuit: demand register with StatePreparation, unit qubits with RY and a uniformly controlled RY, a WeightedSum block into a sum register, and an IntegerComparator writing the shortfall flag" style="width:470px;height:610px;object-fit:contain;background:#F7F5F0;border-radius:12px">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:30px;line-height:1.35;color:#F2A541">IBM’s quantum credit-risk algorithm, with power plants as the loans that can default and the weather as the hidden factor.</p>
+<table style="font-size:24px;color:#F7F5F0;width:1130px">
+<tr><th style="width:32%;text-align:left">Register</th><th style="width:68%;text-align:left">What it holds</th></tr>
+<tr><td style="width:32%">Net load, 5 qubits</td><td style="width:68%">√P of 32 levels: AI demand over 46 winters, its errors, minus wind and small-plant outages</td></tr>
+<tr><td style="width:32%">Plants, 6 qubits</td><td style="width:68%">Link, Bay d’Espoir U7, Holyrood U3, two turbines; frazil shutdown rotated by how cold it is</td></tr>
+<tr><td style="width:32%">Adder + comparator</td><td style="width:68%">lost capacity + net load, all at once; flips the shortfall flag</td></tr>
+<tr><td style="width:32%">Amplitude estimation</td><td style="width:68%">Grover powers 0 to 32, maximum likelihood: P(shortfall)</td></tr>
+</table>
+<p style="font-size:26px;line-height:1.4;color:#C9D3E0">24 qubits, 1,586 two-qubit gates per state preparation. Error falls like 1/N, Monte Carlo like 1/√N.</p>
+</div>
+</div>
+<aside>The quantum component. We adapted IBM’s quantum credit-risk algorithm: plants play the loans that can default, and the weather is the hidden factor that makes failures happen together. Five qubits hold the AI’s net-load distribution in their amplitudes. One qubit per big plant holds its outage; the frazil shutdown is a rotation controlled by how cold the hour is, which is how correlated failures enter. A quantum weighted adder and comparator compute, for every combination at once, whether supply falls short, and flip a flag. Amplitude estimation then reads the flag’s probability with error falling like one over N instead of one over root N. The whole state preparation is 24 qubits.</aside>
+</section>

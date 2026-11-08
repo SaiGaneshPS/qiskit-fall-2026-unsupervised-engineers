@@ -1,0 +1,9 @@
+  r=2: 2048 settings
+  r=3: 1536 settings
+  r=4: 512 settings
+  r=5: 2560 settings
+  r=6: 1536 settings
+  r=7: 3072 settings
+  r=8: 1024 settings
+K=4: best classical mix_flip 2.604e-02 | ideal_exact x0.45 (TVD 0.000)  noisy_budget x0.47 (TVD 0.060)  noisy x0.40 (TVD 0.045)  noisy_flip x2.23 (TVD 0.005)
+K=16: best classical mix_flip 4.318e-02 | ideal_exact x0.60 (TVD 0.000)  noisy_budget x0.59 (TVD 0.033)  noisy x0.57 (TVD 0.015)  noisy_flip x1.32 (TVD 0.009)

@@ -1,0 +1,2358 @@
+{
+ "options": [
+  "Avalon combustion turbine, 150 MW diesel",
+  "Bay d'Espoir Unit 8, 150 MW hydro",
+  "Wind, Avalon (Fermeuse area), 100 MW",
+  "Wind, Burin (St. Lawrence area), 100 MW",
+  "Wind, west coast (Port au Port), 100 MW",
+  "Battery, 25 MW for 4 h",
+  "Battery, 50 MW for 4 h",
+  "15,000 baseboard homes to heat pumps",
+  "35,000 baseboard homes to heat pumps",
+  "10,000 oil homes to heat pumps",
+  "30,000 oil homes to heat pumps",
+  "Smart-thermostat demand response, 40 MW"
+ ],
+ "scenarios": {
+  "5pct": {
+   "best": [
+    {
+     "cost": 141.45986885147767,
+     "lolh": 1.7933027681155165,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 144.94678501862347,
+     "lolh": 1.6767126079351897,
+     "co2_kt": -80.53970365398962,
+     "household_savings": 80.49424540918353,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 145.22106263874332,
+     "lolh": 2.5437256456761563,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 146.4912305931398,
+     "lolh": 2.5474008404109783,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 146.85019225684738,
+     "lolh": 1.4849115375909478,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "Wind, west coast (Port au Port), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 147.91252812411057,
+     "lolh": 2.7185686953787997,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps"
+     ]
+    }
+   ],
+   "meets_criterion": 405,
+   "within_5M": 3,
+   "local_minima": 1,
+   "local_minima_within_10M": 1,
+   "must_have": {
+    "0.1": [
+     1.0,
+     1.0,
+     0.9934,
+     0.9758,
+     0.006,
+     0.0,
+     0.0,
+     1.0,
+     1.0,
+     0.9698,
+     1.0,
+     0.9984
+    ],
+    "0.25": [
+     1.0,
+     1.0,
+     0.8955,
+     0.8192,
+     0.1435,
+     0.0051,
+     0.0001,
+     0.9889,
+     1.0,
+     0.7917,
+     0.9849,
+     0.9424
+    ],
+    "0.5": [
+     1.0,
+     1.0,
+     0.8066,
+     0.742,
+     0.3264,
+     0.0714,
+     0.0098,
+     0.9254,
+     0.9986,
+     0.6512,
+     0.8791,
+     0.8561
+    ]
+   }
+  },
+  "3pct": {
+   "best": [
+    {
+     "cost": 123.61282983350958,
+     "lolh": 2.836486198879777,
+     "co2_kt": 0.0,
+     "household_savings": 41.427541723514615,
+     "options": [
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "Wind, west coast (Port au Port), 100 MW",
+      "Battery, 25 MW for 4 h",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 126.83887557273638,
+     "lolh": 2.7792345384951362,
+     "co2_kt": -30.17990121799654,
+     "household_savings": 54.449776285404255,
+     "options": [
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "Wind, west coast (Port au Port), 100 MW",
+      "Battery, 50 MW for 4 h",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 128.46320345113207,
+     "lolh": 2.7950855494397997,
+     "co2_kt": 10.0,
+     "household_savings": 41.427541723514615,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "Wind, west coast (Port au Port), 100 MW",
+      "Battery, 50 MW for 4 h",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 129.91615643473796,
+     "lolh": 2.62168084780039,
+     "co2_kt": 0.0,
+     "household_savings": 41.427541723514615,
+     "options": [
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "Wind, west coast (Port au Port), 100 MW",
+      "Battery, 50 MW for 4 h",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 134.28696563941688,
+     "lolh": 1.0760124469094363,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 135.04671537859153,
+     "lolh": 1.526290919660978,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    }
+   ],
+   "meets_criterion": 819,
+   "within_5M": 3,
+   "local_minima": 5,
+   "local_minima_within_10M": 3,
+   "must_have": {
+    "0.1": [
+     0.0075,
+     0.9925,
+     1.0,
+     1.0,
+     1.0,
+     0.9529,
+     0.047,
+     1.0,
+     1.0,
+     0.0379,
+     0.0,
+     1.0
+    ],
+    "0.25": [
+     0.129,
+     0.9061,
+     0.9922,
+     0.9877,
+     0.9685,
+     0.6446,
+     0.3218,
+     0.9992,
+     1.0,
+     0.2087,
+     0.0348,
+     0.9933
+    ],
+    "0.5": [
+     0.4763,
+     0.8693,
+     0.8885,
+     0.8637,
+     0.7486,
+     0.3422,
+     0.356,
+     0.9566,
+     0.997,
+     0.412,
+     0.3131,
+     0.8931
+    ]
+   }
+  },
+  "1pct": {
+   "best": [
+    {
+     "cost": 64.41880891149609,
+     "lolh": 1.8491967741173543,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 66.58686353160391,
+     "lolh": 1.7473022361281365,
+     "co2_kt": -120.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Bay d'Espoir Unit 8, 150 MW hydro",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 67.2447365422569,
+     "lolh": 2.506093036027517,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 67.96893495724468,
+     "lolh": 1.7389276017973077,
+     "co2_kt": -80.53970365398962,
+     "household_savings": 80.49424540918353,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 68.54393231038405,
+     "lolh": 2.512671012135406,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps",
+      "Smart-thermostat demand response, 40 MW"
+     ]
+    },
+    {
+     "cost": 68.73661254359304,
+     "lolh": 2.560977137327051,
+     "co2_kt": -110.71960487198616,
+     "household_savings": 93.51647997107318,
+     "options": [
+      "Avalon combustion turbine, 150 MW diesel",
+      "Wind, Avalon (Fermeuse area), 100 MW",
+      "Wind, Burin (St. Lawrence area), 100 MW",
+      "15,000 baseboard homes to heat pumps",
+      "35,000 baseboard homes to heat pumps",
+      "10,000 oil homes to heat pumps",
+      "30,000 oil homes to heat pumps"
+     ]
+    }
+   ],
+   "meets_criterion": 2064,
+   "within_5M": 7,
+   "local_minima": 2,
+   "local_minima_within_10M": 2,
+   "must_have": {
+    "0.1": [
+     0.8952,
+     0.1048,
+     0.9843,
+     0.942,
+     0.006,
+     0.0,
+     0.0,
+     0.9999,
+     1.0,
+     0.9712,
+     1.0,
+     0.9872
+    ],
+    "0.25": [
+     0.696,
+     0.304,
+     0.8709,
+     0.7805,
+     0.145,
+     0.0044,
+     0.0001,
+     0.9838,
+     0.9999,
+     0.7964,
+     0.9849,
+     0.8837
+    ],
+    "0.5": [
+     0.5956,
+     0.4044,
+     0.7776,
+     0.7115,
+     0.3414,
+     0.065,
+     0.0086,
+     0.9018,
+     0.9953,
+     0.6556,
+     0.8765,
+     0.787
+    ]
+   }
+  }
+ },
+ "gaps": [
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.07631800393974897
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0002612290765559022
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.013190536553118859
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.017747286894365444
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.0007364785103546323
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.08207106707306722
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.0005322818838739973
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.019840109326175748
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.01782115159607811
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0014245827147577605
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.07791021106430018
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.0015286902566042926
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.023064515521099116
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.018991523711591185
+  },
+  {
+   "scenario": "5pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.003624530131085435
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.09999999999999831
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0009796372049618585
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.01642716792923571
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.03383136117115737
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.002280916696532631
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.09999998483559358
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.0010741007246122258
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.016600799352110562
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.0336870328369252
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0022778209763497648
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.09999282187311043
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.0012946522091993318
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.01684959355523985
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.03338313964667983
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.0023185601356023877
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.09158161589813407
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0010449146616221539
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.01536659860520817
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.026295893027631356
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.0018255295014183437
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.09847517583418341
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.002118214627753967
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.023591999104723427
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.02794939477808811
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0036472194761232313
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.09318287039149942
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.005678310061849379
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.02784630553166434
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.026754829758025567
+  },
+  {
+   "scenario": "5pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.00677984044505231
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.12499999999999922
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.003906250000022871
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.02258658233531119
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.01985044669114122
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.00530240224600087
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.12499999999999922
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.0039063735272649724
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.0226284479992942
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.01985229440168601
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.005302569985725647
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.12499999996465372
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.003928220720630593
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.022716073977742668
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.020044875532330142
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.005332573720523648
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.12499999999999933
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.003906480457133266
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.010310250335545668
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.01848402132832716
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.0118849222346753
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.12499999999999911
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.003985699692326539
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.010310250395264564
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.018484021364705283
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.012125930646972205
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.12499999358063152
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.00446365413022598
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.010311102251440163
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.01848524001415397
+  },
+  {
+   "scenario": "5pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.013565719573063517
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 6.439293542825908e-15
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0002562037585143173
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.00025477188082367874
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.00045431864155964785
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.00031300147006596557
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 3.2408309857956397e-07
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.00038198378663412136
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.0003721456478750218
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.0008297026337020785
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0005487169266567005
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.00013973393893529362
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.0009212069831637804
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.0012940989523789748
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.0018842484900675194
+  },
+  {
+   "scenario": "3pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.0013132739819421424
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.024883645490853312
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0009765732232707158
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.012727330480566623
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.021776524958745824
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.0020637706266937172
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.03433299892416486
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.0009982918350750491
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.01316387826391785
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.022900497060397873
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.002261352345980905
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.04554804564994752
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.0012706221343533608
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.01369052667120263
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.02417262178235624
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.002883172179416471
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 9.913181386878023e-13
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0009815114420095306
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 2.0723218330354065e-05
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.00021066340266140404
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.00012162803092086172
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 1.0897366773399142e-06
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.0013537353763047877
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 3.967355788514482e-05
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.0002508407002292934
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0002408613910808155
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.00016483451317972353
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.004204939372510319
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.0003068432338479976
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.000848187202255879
+  },
+  {
+   "scenario": "3pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.0011598546959709077
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.12499999999999922
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.003906257300095417
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.018348919341128478
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.0390752614903771
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.009318407187950739
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.1249999999701944
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.00392624562750421
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.018252076377956894
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.03876416180856834
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.00936859191908701
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.12499999981680876
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.004196351470529991
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.0183245375406903
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.03835487637310764
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.010066982771906652
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.12499999999999911
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.006671508443218066
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.025640610630375038
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.050708650371918074
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.004086958084638659
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.12499999628492187
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.007311336294081983
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.026172762803868488
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.05030344385140939
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.004478756199124856
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.12499461355450159
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.007660118029377494
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.026933827763379936
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.049656718367275254
+  },
+  {
+   "scenario": "3pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.004687336700981204
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 2.4424906541753444e-15
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.00030766142598503965
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.014516490948496719
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.016853114889188725
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.0010304852645418583
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 6.2759797359035474e-12
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.000905340788217357
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.026841866998710495
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.02276056188973552
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0025173659700670203
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 8.335648672419538e-07
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.0030938323618860952
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.03822360719474238
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.029204837995977173
+  },
+  {
+   "scenario": "1pct",
+   "n": 12,
+   "situation": "all options open",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.006919489309931803
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.09524443693721607
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0010879104113977744
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.01490500980115228
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.018050777906370108
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.004297439921354784
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.09960045129997674
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.002232891504887702
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.01897454590739911
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.019565636133716313
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0070260909095190005
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.09896727538966488
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.005837273892857819
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.024890613569632736
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.02209600868776085
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Unit 8 delayed, demand response in place",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.01266490712279078
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.03692765000413978
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.001101648729511795
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.013334872499234374
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.015783211777648187
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.001961223715511884
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.045089928515413824
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.002509438600203806
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.016448135977246148
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.020141897127457176
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.0046150395306207015
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.05485249903575862
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.006888861304612637
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.021294276332414652
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.026544491762310107
+  },
+  {
+   "scenario": "1pct",
+   "n": 10,
+   "situation": "Avalon CT approved, small battery not funded",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.009814469873957954
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.11905555705371973
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.0043516368491545165
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.02325510942614384
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.021413480188432144
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.007357808952369593
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.12473426812776423
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.0088930527058112
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.05561648710143119
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.023995073662024247
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.013955178850863281
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.12420121164594633
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.021857617273737473
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.05476426102788279
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.027213746895323077
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "CT approved, Unit 8 delayed, demand response in place, no small battery",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.027215733084821836
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "local",
+   "gap": 0.12458666114329753
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "uniform",
+   "gap": 0.004360135363199569
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "quantum",
+   "gap": 0.022880138734652666
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "q_line",
+   "gap": 0.030926851470455596
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.1,
+   "proposal": "q_scrambled",
+   "gap": 0.00997785329845513
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "local",
+   "gap": 0.11343158158742772
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "uniform",
+   "gap": 0.0071634567000202765
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "quantum",
+   "gap": 0.029903068452901582
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "q_line",
+   "gap": 0.039524587415487034
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.25,
+   "proposal": "q_scrambled",
+   "gap": 0.015588375786138253
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "local",
+   "gap": 0.10608408302038819
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "uniform",
+   "gap": 0.013377536722422367
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "quantum",
+   "gap": 0.04366910719417216
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "q_line",
+   "gap": 0.04738600081272337
+  },
+  {
+   "scenario": "1pct",
+   "n": 8,
+   "situation": "Unit 8 built, no CT, no west-coast wind, small oil program running",
+   "T": 0.5,
+   "proposal": "q_scrambled",
+   "gap": 0.021055896094128168
+  }
+ ],
+ "gap_summary": {
+  "cases": 45,
+  "quantum_wins": 4,
+  "line_wins": 6,
+  "scrambled_wins": 6,
+  "median_speedup": 0.20938210865391504,
+  "max_speedup": 47.18333116353234,
+  "median_speedup_by_T": {
+   "0.1": 0.18069265868249063,
+   "0.25": 0.23957305894481076,
+   "0.5": 0.29603970013717085
+  },
+  "median_steps_by_T": {
+   "0.1": {
+    "local": 10.499300874225204,
+    "uniform": 919.1933357041552,
+    "quantum": 67.09153588900638,
+    "q_line": 50.37670010953839
+   },
+   "0.25": {
+    "local": 10.040115149560908,
+    "uniform": 447.8497937813117,
+    "quantum": 52.70218348730289,
+    "q_line": 43.93564644161867
+   },
+   "0.5": {
+    "local": 10.104350110303528,
+    "uniform": 237.8155572319244,
+    "quantum": 44.02169146745187,
+    "q_line": 37.67259923280491
+   }
+  }
+ },
+ "verify": {
+  "5pct": {
+   "options": [
+    "Avalon combustion turbine, 150 MW diesel",
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "10,000 oil homes to heat pumps",
+    "30,000 oil homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ],
+   "p": 0.0006460728792483808,
+   "lolh_instance": 1.879622636609833,
+   "lolh_engine": 1.7933027681155165,
+   "n_mc": 154681.2997758652,
+   "n_qae": 7317.156846489929,
+   "n_is": 4083.7525568108667,
+   "qubits": 26
+  },
+  "3pct": {
+   "options": [
+    "Bay d'Espoir Unit 8, 150 MW hydro",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "Wind, west coast (Port au Port), 100 MW",
+    "Battery, 25 MW for 4 h",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ],
+   "p": 0.000997003291274631,
+   "lolh_instance": 2.9005860101022023,
+   "lolh_engine": 2.836486198879777,
+   "n_mc": 100200.57159806741,
+   "n_qae": 5616.569677955746,
+   "n_is": 4659.7577192153085,
+   "qubits": 23
+  },
+  "1pct": {
+   "options": [
+    "Avalon combustion turbine, 150 MW diesel",
+    "Wind, Avalon (Fermeuse area), 100 MW",
+    "Wind, Burin (St. Lawrence area), 100 MW",
+    "15,000 baseboard homes to heat pumps",
+    "35,000 baseboard homes to heat pumps",
+    "10,000 oil homes to heat pumps",
+    "30,000 oil homes to heat pumps",
+    "Smart-thermostat demand response, 40 MW"
+   ],
+   "p": 0.0006466797565335286,
+   "lolh_instance": 1.88138822733411,
+   "lolh_engine": 1.8491967741173543,
+   "n_mc": 154536.0451052951,
+   "n_qae": 7608.437110021207,
+   "n_is": 11797.498494785,
+   "qubits": 23
+  }
+ }
+}

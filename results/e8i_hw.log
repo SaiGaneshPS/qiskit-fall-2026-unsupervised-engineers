@@ -1,0 +1,8 @@
+12288 settings in 7 groups; two-qubit gates by Trotter steps {2: 14, 3: 28, 4: 42, 5: 56, 6: 70, 7: 84, 8: 98}
+D:\qiskit\lightson\experiments\e8i_rotation_hardware.py:175: DeprecationWarning: The SamplerV2 class is deprecated as of qiskit-ibm-runtime 0.50.0 and will be removed no sooner than 3 months after the release date. `qiskit_ibm_runtime.executor_sampler.Sampler` provides a new Sampler implementation that runs all the pre- and post-processing in the client side. The top-level `qiskit_ibm_runtime.Sampler` import will be updated to point to the client-side sampler in an upcoming release, with the legacy Sampler being available until the deprecation is completed.
+  sampler = SamplerV2(mode=backend)
+submitted job dbnm1s44148s73918o90 to ibm_quebec; waiting...
+K=4: best classical mix_flip 2.604e-02 | ideal_exact x0.45 (same-samples x0.44) (TVD 0.000)  hardware x0.33 (same-samples x0.32) (TVD 0.157)  hardware_flip x2.04 (same-samples x1.99) (TVD 0.011)
+K=16: best classical mix_flip 4.318e-02 | ideal_exact x0.60 (same-samples x0.60) (TVD 0.000)  hardware x0.50 (same-samples x0.50) (TVD 0.037)  hardware_flip x1.25 (same-samples x1.25) (TVD 0.019)
+QPU seconds 236
+exit 0

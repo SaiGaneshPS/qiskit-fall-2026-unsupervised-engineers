@@ -1,0 +1,593 @@
+{
+ "n": 10,
+ "rows": [
+  {
+   "seed": "Downtown",
+   "names": [
+    "Downtown",
+    "Ecclesiastical District",
+    "Pennywell",
+    "Bannerman",
+    "Fort William",
+    "The Battery",
+    "Georgestown",
+    "Rabbittown",
+    "Churchill Park",
+    "Mundy Pond"
+   ],
+   "k_eff": 4,
+   "T": 0.6779168254264096,
+   "line_order": [
+    "The Battery",
+    "Fort William",
+    "Bannerman",
+    "Downtown",
+    "Ecclesiastical District",
+    "Georgestown",
+    "Churchill Park",
+    "Rabbittown",
+    "Pennywell",
+    "Mundy Pond"
+   ],
+   "classical": {
+    "local": 3.067079173912912e-05,
+    "pair": 5.551115123125783e-16,
+    "uniform": 0.002368883232160779,
+    "mix": 0.0033586472494159247,
+    "mix_flip": 0.01618126702559375
+   },
+   "quantum": {
+    "line_fit": 0.02358979666379646,
+    "circuit_fit": 0.017416218604054956,
+    "line_fit_flip": 0.03028119643557925,
+    "circuit_fit_flip": 0.03000061694288092
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 1.457846077596069,
+    "circuit_fit": 1.0763198318467828,
+    "line_fit_flip": 1.8713736314766813,
+    "circuit_fit_flip": 1.8540338587472318
+   }
+  },
+  {
+   "seed": "Downtown",
+   "names": [
+    "Downtown",
+    "Ecclesiastical District",
+    "Pennywell",
+    "Bannerman",
+    "Fort William",
+    "The Battery",
+    "Georgestown",
+    "Rabbittown",
+    "Churchill Park",
+    "Mundy Pond"
+   ],
+   "k_eff": 16,
+   "T": 1.3427722591846674,
+   "line_order": [
+    "The Battery",
+    "Fort William",
+    "Bannerman",
+    "Downtown",
+    "Ecclesiastical District",
+    "Georgestown",
+    "Churchill Park",
+    "Rabbittown",
+    "Pennywell",
+    "Mundy Pond"
+   ],
+   "classical": {
+    "local": 0.0015860087586184735,
+    "pair": 2.55351295663786e-15,
+    "uniform": 0.004161018206440437,
+    "mix": 0.009457747608001443,
+    "mix_flip": 0.022514196986872625
+   },
+   "quantum": {
+    "line_fit": 0.023743412206336356,
+    "circuit_fit": 0.020179783994918044,
+    "line_fit_flip": 0.027831634384721804,
+    "circuit_fit_flip": 0.027248410149790736
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 1.0545973378566622,
+    "circuit_fit": 0.8963137351371798,
+    "line_fit_flip": 1.236181525858978,
+    "circuit_fit_flip": 1.2102767940459298
+   }
+  },
+  {
+   "seed": "Georgestown",
+   "names": [
+    "Georgestown",
+    "Ecclesiastical District",
+    "Churchill Park",
+    "Rennies Mill",
+    "Bannerman",
+    "Downtown",
+    "Rabbittown",
+    "Mount Cashel",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park"
+   ],
+   "k_eff": 4,
+   "T": 0.15688711007799824,
+   "line_order": [
+    "Bannerman",
+    "Rennies Mill",
+    "Georgestown",
+    "Ecclesiastical District",
+    "Downtown",
+    "Rabbittown",
+    "Mount Cashel",
+    "Churchill Park",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park"
+   ],
+   "classical": {
+    "local": 5.551115123125783e-16,
+    "pair": 1.3322676295501878e-15,
+    "uniform": 0.0019001912037892588,
+    "mix": 0.0012960583515434498,
+    "mix_flip": 0.0009910747356118854
+   },
+   "quantum": {
+    "line_fit": 0.003619877540079197,
+    "circuit_fit": 0.0018728470752182869,
+    "line_fit_flip": 0.0027581071517098765,
+    "circuit_fit_flip": 0.001459651669867612
+   },
+   "best_classical": "uniform",
+   "ratio": {
+    "line_fit": 1.9050069976435176,
+    "circuit_fit": 0.9856098015207924,
+    "line_fit_flip": 1.451489274452912,
+    "circuit_fit_flip": 0.7681604182552016
+   }
+  },
+  {
+   "seed": "Georgestown",
+   "names": [
+    "Georgestown",
+    "Ecclesiastical District",
+    "Churchill Park",
+    "Rennies Mill",
+    "Bannerman",
+    "Downtown",
+    "Rabbittown",
+    "Mount Cashel",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park"
+   ],
+   "k_eff": 16,
+   "T": 0.46781689160957496,
+   "line_order": [
+    "Bannerman",
+    "Rennies Mill",
+    "Georgestown",
+    "Ecclesiastical District",
+    "Downtown",
+    "Rabbittown",
+    "Mount Cashel",
+    "Churchill Park",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park"
+   ],
+   "classical": {
+    "local": 1.3104590497192703e-06,
+    "pair": -1.1102230246251565e-15,
+    "uniform": 0.0051490457136139645,
+    "mix": 0.0043639925064783425,
+    "mix_flip": 0.004394543075751822
+   },
+   "quantum": {
+    "line_fit": 0.015482496413807834,
+    "circuit_fit": 0.010641460606416908,
+    "line_fit_flip": 0.014552451151997547,
+    "circuit_fit_flip": 0.011001303394249873
+   },
+   "best_classical": "uniform",
+   "ratio": {
+    "line_fit": 3.0068671507173557,
+    "circuit_fit": 2.0666859838282496,
+    "line_fit_flip": 2.8262423682744133,
+    "circuit_fit_flip": 2.1365713194510327
+   }
+  },
+  {
+   "seed": "Churchill Park",
+   "names": [
+    "Churchill Park",
+    "Mount Cashel",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park",
+    "Georgestown",
+    "Bannerman",
+    "Summerville",
+    "Kent's Pond",
+    "Rennies Mill",
+    "Ecclesiastical District"
+   ],
+   "k_eff": 4,
+   "T": 0.45889056560405267,
+   "line_order": [
+    "Bannerman",
+    "Rennies Mill",
+    "Georgestown",
+    "Ecclesiastical District",
+    "Mount Cashel",
+    "Churchill Park",
+    "Summerville",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park",
+    "Kent's Pond"
+   ],
+   "classical": {
+    "local": 1.703937102526254e-09,
+    "pair": 7.771561172376096e-16,
+    "uniform": 0.00176292046455917,
+    "mix": 0.0010279501196002183,
+    "mix_flip": 0.004198509056598132
+   },
+   "quantum": {
+    "line_fit": 0.013665322490451048,
+    "circuit_fit": 0.011042069027395573,
+    "line_fit_flip": 0.010938130794778234,
+    "circuit_fit_flip": 0.00924444429149096
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 3.2548036234375686,
+    "circuit_fit": 2.6299976678727184,
+    "line_fit_flip": 2.605241681588969,
+    "circuit_fit_flip": 2.2018397880940452
+   }
+  },
+  {
+   "seed": "Churchill Park",
+   "names": [
+    "Churchill Park",
+    "Mount Cashel",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park",
+    "Georgestown",
+    "Bannerman",
+    "Summerville",
+    "Kent's Pond",
+    "Rennies Mill",
+    "Ecclesiastical District"
+   ],
+   "k_eff": 16,
+   "T": 0.7972847917767677,
+   "line_order": [
+    "Bannerman",
+    "Rennies Mill",
+    "Georgestown",
+    "Ecclesiastical District",
+    "Mount Cashel",
+    "Churchill Park",
+    "Summerville",
+    "Memorial University of Newfoundland main campus",
+    "Pippy Park",
+    "Kent's Pond"
+   ],
+   "classical": {
+    "local": 3.898001650126659e-06,
+    "pair": -6.661338147750939e-16,
+    "uniform": 0.003340762350976023,
+    "mix": 0.003955742613442115,
+    "mix_flip": 0.010577651559121048
+   },
+   "quantum": {
+    "line_fit": 0.027609129466827698,
+    "circuit_fit": 0.021776319680273826,
+    "line_fit_flip": 0.02209247936891834,
+    "circuit_fit_flip": 0.019860562144793592
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 2.6101379226299533,
+    "circuit_fit": 2.0587102494878677,
+    "line_fit_flip": 2.0885996523366397,
+    "circuit_fit_flip": 1.8775965566447443
+   }
+  },
+  {
+   "seed": "Cowan Heights",
+   "names": [
+    "Cowan Heights",
+    "Waterford Valley",
+    "Fairview Acres",
+    "Mundy Pond",
+    "Sesame Park",
+    "Brookfield",
+    "Glenview Heights",
+    "Pennywell",
+    "Rabbittown",
+    "Downtown"
+   ],
+   "k_eff": 4,
+   "T": 0.2849715464016565,
+   "line_order": [
+    "Brookfield",
+    "Sesame Park",
+    "Waterford Valley",
+    "Cowan Heights",
+    "Mundy Pond",
+    "Pennywell",
+    "Rabbittown",
+    "Downtown",
+    "Fairview Acres",
+    "Glenview Heights"
+   ],
+   "classical": {
+    "local": 5.586614504338172e-10,
+    "pair": 6.661338147750939e-16,
+    "uniform": 0.001878602613511915,
+    "mix": 0.0014124278938363322,
+    "mix_flip": 0.005240669656492836
+   },
+   "quantum": {
+    "line_fit": 0.01104310418472143,
+    "circuit_fit": 0.006009139337539882,
+    "line_fit_flip": 0.033398764434638295,
+    "circuit_fit_flip": 0.03259327784707511
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 2.1071933375994747,
+    "circuit_fit": 1.1466357796650977,
+    "line_fit_flip": 6.3729955566383545,
+    "circuit_fit_flip": 6.219296384517242
+   }
+  },
+  {
+   "seed": "Cowan Heights",
+   "names": [
+    "Cowan Heights",
+    "Waterford Valley",
+    "Fairview Acres",
+    "Mundy Pond",
+    "Sesame Park",
+    "Brookfield",
+    "Glenview Heights",
+    "Pennywell",
+    "Rabbittown",
+    "Downtown"
+   ],
+   "k_eff": 16,
+   "T": 0.5739249864385202,
+   "line_order": [
+    "Brookfield",
+    "Sesame Park",
+    "Waterford Valley",
+    "Cowan Heights",
+    "Mundy Pond",
+    "Pennywell",
+    "Rabbittown",
+    "Downtown",
+    "Fairview Acres",
+    "Glenview Heights"
+   ],
+   "classical": {
+    "local": 8.757907607348514e-06,
+    "pair": 1.2212453270876722e-15,
+    "uniform": 0.003977680189652499,
+    "mix": 0.0038748775978560968,
+    "mix_flip": 0.008409045952202931
+   },
+   "quantum": {
+    "line_fit": 0.021190224353491383,
+    "circuit_fit": 0.012735566038241886,
+    "line_fit_flip": 0.03982587578575825,
+    "circuit_fit_flip": 0.03883803847774103
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 2.519932043889015,
+    "circuit_fit": 1.5145078419871791,
+    "line_fit_flip": 4.736075413564008,
+    "circuit_fit_flip": 4.61860224078887
+   }
+  },
+  {
+   "seed": "Clovelly Trails",
+   "names": [
+    "Clovelly Trails",
+    "Stavanger Drive",
+    "King William Estates",
+    "Woodlands",
+    "Robinhood Bay",
+    "Glenvilla Court",
+    "Virginia Waters",
+    "Eastbourne Crescent",
+    "East Point Landing",
+    "Wedgewood Park"
+   ],
+   "k_eff": 4,
+   "T": 0.4559234692855726,
+   "line_order": [
+    "Robinhood Bay",
+    "Glenvilla Court",
+    "Clovelly Trails",
+    "Stavanger Drive",
+    "Eastbourne Crescent",
+    "Wedgewood Park",
+    "Woodlands",
+    "King William Estates",
+    "East Point Landing",
+    "Virginia Waters"
+   ],
+   "classical": {
+    "local": 8.847229341135687e-06,
+    "pair": 1.1102230246251565e-16,
+    "uniform": 0.00210708802332793,
+    "mix": 0.007822874754941145,
+    "mix_flip": 0.01608417452874744
+   },
+   "quantum": {
+    "line_fit": 0.044722569170719484,
+    "circuit_fit": 0.03893599774475198,
+    "line_fit_flip": 0.03625977010157022,
+    "circuit_fit_flip": 0.03633324319459086
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 2.7805324476420155,
+    "circuit_fit": 2.4207644399257915,
+    "line_fit_flip": 2.2543755687780367,
+    "circuit_fit_flip": 2.258943605072925
+   }
+  },
+  {
+   "seed": "Clovelly Trails",
+   "names": [
+    "Clovelly Trails",
+    "Stavanger Drive",
+    "King William Estates",
+    "Woodlands",
+    "Robinhood Bay",
+    "Glenvilla Court",
+    "Virginia Waters",
+    "Eastbourne Crescent",
+    "East Point Landing",
+    "Wedgewood Park"
+   ],
+   "k_eff": 16,
+   "T": 0.9033638376165335,
+   "line_order": [
+    "Robinhood Bay",
+    "Glenvilla Court",
+    "Clovelly Trails",
+    "Stavanger Drive",
+    "Eastbourne Crescent",
+    "Wedgewood Park",
+    "Woodlands",
+    "King William Estates",
+    "East Point Landing",
+    "Virginia Waters"
+   ],
+   "classical": {
+    "local": 0.0005103295960950938,
+    "pair": -4.440892098500626e-16,
+    "uniform": 0.004039364763146591,
+    "mix": 0.012268717056735934,
+    "mix_flip": 0.018631284283912253
+   },
+   "quantum": {
+    "line_fit": 0.043938911417886084,
+    "circuit_fit": 0.03785010887885554,
+    "line_fit_flip": 0.047494270886050405,
+    "circuit_fit_flip": 0.04440480858838758
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 2.3583404529888727,
+    "circuit_fit": 2.0315351481990085,
+    "line_fit_flip": 2.5491678492105225,
+    "circuit_fit_flip": 2.3833466288059517
+   }
+  },
+  {
+   "seed": "White Hills",
+   "names": [
+    "White Hills",
+    "Robinhood Bay",
+    "Virginia Park",
+    "Quidi Vidi",
+    "Pleasantville",
+    "Virginia Waters",
+    "East Meadows",
+    "East Point Landing",
+    "Clovelly Trails",
+    "Bally Haly"
+   ],
+   "k_eff": 4,
+   "T": 0.5027777542022756,
+   "line_order": [
+    "Robinhood Bay",
+    "White Hills",
+    "Virginia Park",
+    "Bally Haly",
+    "Pleasantville",
+    "Quidi Vidi",
+    "Clovelly Trails",
+    "East Meadows",
+    "East Point Landing",
+    "Virginia Waters"
+   ],
+   "classical": {
+    "local": 8.003927431943225e-08,
+    "pair": 1.1102230246251565e-16,
+    "uniform": 0.0014993847579665154,
+    "mix": 0.0011570959798415936,
+    "mix_flip": 0.0041893414127655015
+   },
+   "quantum": {
+    "line_fit": 0.007045543357311113,
+    "circuit_fit": 0.004505413440848427,
+    "line_fit_flip": 0.009026230987326023,
+    "circuit_fit_flip": 0.007092832737063071
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 1.6817782708858173,
+    "circuit_fit": 1.0754467103396754,
+    "line_fit_flip": 2.15457039615388,
+    "circuit_fit_flip": 1.6930662932961802
+   }
+  },
+  {
+   "seed": "White Hills",
+   "names": [
+    "White Hills",
+    "Robinhood Bay",
+    "Virginia Park",
+    "Quidi Vidi",
+    "Pleasantville",
+    "Virginia Waters",
+    "East Meadows",
+    "East Point Landing",
+    "Clovelly Trails",
+    "Bally Haly"
+   ],
+   "k_eff": 16,
+   "T": 0.8193180276798907,
+   "line_order": [
+    "Robinhood Bay",
+    "White Hills",
+    "Virginia Park",
+    "Bally Haly",
+    "Pleasantville",
+    "Quidi Vidi",
+    "Clovelly Trails",
+    "East Meadows",
+    "East Point Landing",
+    "Virginia Waters"
+   ],
+   "classical": {
+    "local": 2.115060516816314e-05,
+    "pair": -2.220446049250313e-16,
+    "uniform": 0.0028782415493308067,
+    "mix": 0.003833520994476536,
+    "mix_flip": 0.0085427982872881
+   },
+   "quantum": {
+    "line_fit": 0.015353579953619079,
+    "circuit_fit": 0.010251467447255247,
+    "line_fit_flip": 0.020599637112088454,
+    "circuit_fit_flip": 0.017537748834098865
+   },
+   "best_classical": "mix_flip",
+   "ratio": {
+    "line_fit": 1.797254182679883,
+    "circuit_fit": 1.2000128181078196,
+    "line_fit_flip": 2.4113453717783826,
+    "circuit_fit_flip": 2.0529278866616196
+   }
+  }
+ ]
+}

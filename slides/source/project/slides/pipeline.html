@@ -1,0 +1,37 @@
+<section id="pipeline" data-transition="fade" style="background:#F7F5F0;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">From weather to a decision</h2>
+<div style="display:flex;align-items:center;gap:16px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#E9EEF3;padding:28px;border-radius:20px">
+<p style="font-size:24px;font-weight:600;color:#6A7280">DATA</p>
+<h3 style="font-size:30px;font-weight:600;line-height:1.2">Weather and demand</h3>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">ERA5 1980-2026, 4 sites; 373k island demand readings</p>
+</div>
+<x-shape kind="arrow-right" style="width:48px;height:28px;background:#F2A541"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#E9EEF3;padding:28px;border-radius:20px">
+<p style="font-size:24px;font-weight:600;color:#6A7280">AI, CLASSICAL</p>
+<h3 style="font-size:30px;font-weight:600;line-height:1.2">Demand model</h3>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">46 winters replayed on today’s grid, with its own errors and wind</p>
+</div>
+<x-shape kind="arrow-right" style="width:48px;height:28px;background:#F2A541"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#E9EEF3;padding:28px;border-radius:20px">
+<p style="font-size:24px;font-weight:600;color:#6A7280">CLASSICAL</p>
+<h3 style="font-size:30px;font-weight:600;line-height:1.2">Reliability engine</h3>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">NL Hydro fleet and outage rates; checked against Hydro</p>
+</div>
+<x-shape kind="arrow-right" style="width:48px;height:28px;background:#F2A541"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#14213D;color:#F7F5F0;padding:28px;border-radius:20px">
+<p style="font-size:24px;font-weight:600;color:#F2A541">QUANTUM</p>
+<h3 style="font-size:30px;font-weight:600;line-height:1.2">24-qubit state</h3>
+<p style="font-size:24px;line-height:1.35;color:#C9D3E0">every demand level x outage pattern; adder flags shortfall</p>
+</div>
+<x-shape kind="arrow-right" style="width:48px;height:28px;background:#F2A541"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#14213D;color:#F7F5F0;padding:28px;border-radius:20px">
+<p style="font-size:24px;font-weight:600;color:#F2A541">QUANTUM + CLASSICAL</p>
+<h3 style="font-size:30px;font-weight:600;line-height:1.2">Amplitude estimation</h3>
+<p style="font-size:24px;line-height:1.35;color:#C9D3E0">blackout hours a year, then the decision and CO2</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#3F4A5A;width:1600px">Baselines at every step: linear degree-hour model (AI), exact convolution and Monte Carlo (risk), tuned importance sampling, and NL Hydro’s own published results.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7280">All quantum results are from simulators (Qiskit Aer, IBM Heron noise model) unless marked “hardware”.</p>
+<aside>The pipeline has five steps. Real weather since 1980 and four years of real island demand go into an AI model. It replays 46 winters on today’s grid, including its own forecast errors and the wind output of the same weather. A classical reliability engine turns that into blackout risk, and we check it against NL Hydro. The quantum part prepares every combination of demand and plant outage in one state, flags the shortfalls with a quantum adder, and amplitude estimation reads the probability. Every step has a baseline.</aside>
+</section>

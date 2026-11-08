@@ -1,0 +1,5 @@
+local                  final median marginal error 0.889  acceptance 0.081  [0s]
+uniform                final median marginal error 0.623  acceptance 0.006  [0s]
+mix_flip               final median marginal error 0.157  acceptance 0.083  [0s]
+quantum_line_fit       final median marginal error 0.148  acceptance 0.115  [185s]
+quantum_line_fit_flip  final median marginal error 0.102  acceptance 0.131  [171s]

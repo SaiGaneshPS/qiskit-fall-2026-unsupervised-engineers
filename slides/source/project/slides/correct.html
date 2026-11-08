@@ -1,0 +1,19 @@
+<section id="correct" data-transition="fade" style="background:#F7F5F0;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1">The real 24-qubit circuit gets the right answer</h2>
+<img src="/_blob/981d2b5d6a1cce3b57c8ffe1aa1db014" alt="Left: measured flag probability of the real 24-qubit circuits on Aer for Grover powers 0 to 32 lying on the theoretical curve. Right: relative error vs oracle queries, amplitude estimation falling faster than Monte Carlo, reaching 4.4% vs 35.5% at 13,300 queries" style="width:1444px;height:520px;object-fit:contain;background:#FFFFFF;border-radius:12px">
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">1 in 1,706</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">circuit = exact enumeration to 10 digits; 1.705 vs 1.709 blackout hours from the full engine</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">4.4% vs 35.5%</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">error at 13,300 queries, end to end; Monte Carlo would need about 65x more samples</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F6F7A">168k gates</p>
+<p style="font-size:24px;line-height:1.35;color:#3F4A5A">deepest circuit run (32 Grover steps), on the Aer simulator; 300 independent trials</p>
+</div>
+</div>
+<aside>First, is the circuit right? On the 2026-27 grid the circuit’s exact output probability, about one winter hour in 1,706, matches classical enumeration to ten digits and the full reliability engine within 0.2 percent. Then we ran the actual amplified circuits on Aer, up to 32 Grover iterations and about 168,000 two-qubit gates, recorded every shot, and ran maximum-likelihood amplitude estimation 300 times. The measured points sit on the theory curve, and at 13,300 queries the error is 4.4 percent against 35.5 percent for Monte Carlo with the same number of samples. This is a simulator result.</aside>
+</section>

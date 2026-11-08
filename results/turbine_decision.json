@@ -1,0 +1,288 @@
+{
+ "rates": [
+  0.011,
+  0.015,
+  0.02,
+  0.025,
+  0.03,
+  0.035,
+  0.04,
+  0.045,
+  0.05
+ ],
+ "criterion": 2.8,
+ "plans": {
+  "Hydro's plan: Unit 8 + turbine": [
+   "Avalon combustion turbine, 150 MW diesel",
+   "Bay d'Espoir Unit 8, 150 MW hydro"
+  ],
+  "cheapest plan without the turbine": [
+   "Bay d'Espoir Unit 8, 150 MW hydro",
+   "Wind, Avalon (Fermeuse area), 100 MW",
+   "Wind, Burin (St. Lawrence area), 100 MW",
+   "15,000 baseboard homes to heat pumps",
+   "35,000 baseboard homes to heat pumps",
+   "10,000 oil homes to heat pumps",
+   "30,000 oil homes to heat pumps",
+   "Smart-thermostat demand response, 40 MW"
+  ],
+  "strongest plan without the turbine": [
+   "Bay d'Espoir Unit 8, 150 MW hydro",
+   "Wind, Avalon (Fermeuse area), 100 MW",
+   "Wind, Burin (St. Lawrence area), 100 MW",
+   "Wind, west coast (Port au Port), 100 MW",
+   "Battery, 25 MW for 4 h",
+   "Battery, 50 MW for 4 h",
+   "15,000 baseboard homes to heat pumps",
+   "35,000 baseboard homes to heat pumps",
+   "Smart-thermostat demand response, 40 MW"
+  ],
+  "same, plus the turbine": [
+   "Avalon combustion turbine, 150 MW diesel",
+   "Bay d'Espoir Unit 8, 150 MW hydro",
+   "Wind, Avalon (Fermeuse area), 100 MW",
+   "Wind, Burin (St. Lawrence area), 100 MW",
+   "Wind, west coast (Port au Port), 100 MW",
+   "Battery, 25 MW for 4 h",
+   "Battery, 50 MW for 4 h",
+   "15,000 baseboard homes to heat pumps",
+   "35,000 baseboard homes to heat pumps",
+   "Smart-thermostat demand response, 40 MW"
+  ]
+ },
+ "lolh": {
+  "Hydro's plan: Unit 8 + turbine": [
+   1.9094504455787509,
+   2.6028049896251884,
+   3.4694981696832348,
+   4.336191349741283,
+   5.202884529799331,
+   6.069577709857381,
+   6.936270889915426,
+   7.802964069973477,
+   8.669657250031522
+  ],
+  "cheapest plan without the turbine": [
+   1.7473022361281365,
+   2.382287848311269,
+   3.1760198635401857,
+   3.969751878769102,
+   4.763483893998016,
+   5.557215909226935,
+   6.350947924455849,
+   7.144679939684766,
+   7.9384119549136845
+  ],
+  "strongest plan without the turbine": [
+   0.9243354179801465,
+   1.2602541675345134,
+   1.680152604477472,
+   2.100051041420429,
+   2.5199494783633885,
+   2.9398479153063475,
+   3.3597463522493047,
+   3.779644789192263,
+   4.19954322613522
+  ],
+  "same, plus the turbine": [
+   0.1972228150018168,
+   0.26892587089552955,
+   0.3585546907626707,
+   0.4481835106298117,
+   0.5378123304969527,
+   0.6274411503640935,
+   0.7170699702312346,
+   0.8066987900983758,
+   0.8963276099655166
+  ]
+ },
+ "break_even": {
+  "Hydro's plan: Unit 8 + turbine": 0.016137628718629147,
+  "cheapest plan without the turbine": 0.017631317268765205,
+  "strongest plan without the turbine": 0.03333474117783695,
+  "same, plus the turbine": Infinity
+ },
+ "cheapest": {
+  "1pct": {
+   "with turbine": {
+    "net_cost": 64.41880891149609,
+    "lolh": 1.8491967741173543,
+    "co2_kt": -110.71960487198616,
+    "passing": 1521,
+    "built": [
+     "Avalon combustion turbine, 150 MW diesel",
+     "Wind, Avalon (Fermeuse area), 100 MW",
+     "Wind, Burin (St. Lawrence area), 100 MW",
+     "15,000 baseboard homes to heat pumps",
+     "35,000 baseboard homes to heat pumps",
+     "10,000 oil homes to heat pumps",
+     "30,000 oil homes to heat pumps",
+     "Smart-thermostat demand response, 40 MW"
+    ]
+   },
+   "without": {
+    "net_cost": 66.58686353160391,
+    "lolh": 1.7473022361281365,
+    "co2_kt": -120.71960487198616,
+    "passing": 543,
+    "built": [
+     "Bay d'Espoir Unit 8, 150 MW hydro",
+     "Wind, Avalon (Fermeuse area), 100 MW",
+     "Wind, Burin (St. Lawrence area), 100 MW",
+     "15,000 baseboard homes to heat pumps",
+     "35,000 baseboard homes to heat pumps",
+     "10,000 oil homes to heat pumps",
+     "30,000 oil homes to heat pumps",
+     "Smart-thermostat demand response, 40 MW"
+    ]
+   }
+  },
+  "3pct": {
+   "with turbine": {
+    "net_cost": 128.46320345113207,
+    "lolh": 2.7950855494397997,
+    "co2_kt": 10.0,
+    "passing": 815,
+    "built": [
+     "Avalon combustion turbine, 150 MW diesel",
+     "Wind, Avalon (Fermeuse area), 100 MW",
+     "Wind, Burin (St. Lawrence area), 100 MW",
+     "Wind, west coast (Port au Port), 100 MW",
+     "Battery, 50 MW for 4 h",
+     "15,000 baseboard homes to heat pumps",
+     "35,000 baseboard homes to heat pumps",
+     "Smart-thermostat demand response, 40 MW"
+    ]
+   },
+   "without": {
+    "net_cost": 126.83887557273638,
+    "lolh": 2.7792345384951362,
+    "co2_kt": -30.17990121799654,
+    "passing": 4,
+    "built": [
+     "Bay d'Espoir Unit 8, 150 MW hydro",
+     "Wind, Avalon (Fermeuse area), 100 MW",
+     "Wind, Burin (St. Lawrence area), 100 MW",
+     "Wind, west coast (Port au Port), 100 MW",
+     "Battery, 50 MW for 4 h",
+     "15,000 baseboard homes to heat pumps",
+     "35,000 baseboard homes to heat pumps",
+     "10,000 oil homes to heat pumps",
+     "Smart-thermostat demand response, 40 MW"
+    ]
+   }
+  },
+  "5pct": {
+   "with turbine": {
+    "net_cost": 141.45986885147767,
+    "lolh": 1.7933027681155165,
+    "co2_kt": -110.71960487198616,
+    "passing": 405,
+    "built": [
+     "Avalon combustion turbine, 150 MW diesel",
+     "Bay d'Espoir Unit 8, 150 MW hydro",
+     "Wind, Avalon (Fermeuse area), 100 MW",
+     "Wind, Burin (St. Lawrence area), 100 MW",
+     "15,000 baseboard homes to heat pumps",
+     "35,000 baseboard homes to heat pumps",
+     "10,000 oil homes to heat pumps",
+     "30,000 oil homes to heat pumps",
+     "Smart-thermostat demand response, 40 MW"
+    ]
+   },
+   "without": null
+  }
+ },
+ "checks": [
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.011,
+   "p": 0.00032966134552790883,
+   "lolh": 0.9590851858545432,
+   "eps": 0.9597243505044887,
+   "n_mc": 3292.2723251712673,
+   "n_is": 118.97279673032868,
+   "n_qae": 804.6104403234
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.02,
+   "p": 0.0005943167183261212,
+   "lolh": 1.7290482126119164,
+   "eps": 0.3096940211315142,
+   "n_mc": 17533.080443150622,
+   "n_is": 674.6803903425514,
+   "n_qae": 2235.291041224996
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.025,
+   "p": 0.0007413474809917947,
+   "lolh": 2.1568054496993456,
+   "eps": 0.14910815214935455,
+   "n_mc": 60625.2196263744,
+   "n_is": 2321.2223327046167,
+   "n_qae": 4245.260367965089
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.03,
+   "p": 0.0008883782436574684,
+   "lolh": 2.584562686786776,
+   "eps": 0.04167771095563241,
+   "n_mc": 647453.1971725728,
+   "n_is": 24602.94105315635,
+   "n_qae": 14329.527254489389
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.032,
+   "p": 0.0009471905487237378,
+   "lolh": 2.7556655816217472,
+   "eps": 0.01,
+   "n_mc": 10547537.776822401,
+   "n_is": 442687.3913081199,
+   "n_qae": 182988.97474069704
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.034,
+   "p": 0.0010060028537900072,
+   "lolh": 2.9267684764567194,
+   "eps": 0.021656731216777244,
+   "n_mc": 2117277.843804381,
+   "n_is": 82477.31079148919,
+   "n_qae": 24057.108337269725
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.036,
+   "p": 0.0010648151588562773,
+   "lolh": 3.097871371291693,
+   "eps": 0.04807678169792639,
+   "n_mc": 405875.00712326,
+   "n_is": 15623.094675583503,
+   "n_qae": 10709.537361202849
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.04,
+   "p": 0.0011824397689888155,
+   "lolh": 3.4400771609616347,
+   "eps": 0.09303238430598292,
+   "n_mc": 97597.53256709965,
+   "n_is": 4210.454536386768,
+   "n_qae": 5560.178371441971
+  },
+  {
+   "plan": "strongest plan without the turbine",
+   "link_rate": 0.045,
+   "p": 0.001329470531654489,
+   "lolh": 3.867834398049064,
+   "eps": 0.13804034611560412,
+   "n_mc": 39421.34517282898,
+   "n_is": 1772.4849644560306,
+   "n_qae": 3554.1383673091486
+  }
+ ]
+}

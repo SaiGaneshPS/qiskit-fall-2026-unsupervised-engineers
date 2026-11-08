@@ -1,0 +1,150 @@
+{
+ "area": [
+  "Downtown",
+  "Ecclesiastical District",
+  "Pennywell",
+  "Bannerman",
+  "Fort William",
+  "The Battery",
+  "Georgestown",
+  "Rabbittown"
+ ],
+ "n": 8,
+ "line": [
+  "The Battery",
+  "Fort William",
+  "Bannerman",
+  "Downtown",
+  "Pennywell",
+  "Rabbittown",
+  "Ecclesiastical District",
+  "Georgestown"
+ ],
+ "backend": "ibm_quebec",
+ "job_id": "dbnm1s44148s73918o90",
+ "layout": [
+  148,
+  151,
+  149,
+  147,
+  137,
+  127,
+  152,
+  150
+ ],
+ "physical_path": [
+  127,
+  137,
+  147,
+  148,
+  149,
+  150,
+  151,
+  152
+ ],
+ "draws": 24,
+ "keys": 2,
+ "shots_per_setting": 32,
+ "two_qubit_gates_by_trotter_steps": {
+  "2": 14,
+  "3": 28,
+  "4": 42,
+  "5": 56,
+  "6": 70,
+  "7": 84,
+  "8": 98
+ },
+ "qpu_usage_seconds": 236,
+ "wall_seconds": 283.3706765174866,
+ "results": [
+  {
+   "k_eff": 4,
+   "T": 0.4237205871389738,
+   "classical": {
+    "local": 4.9501080234826134e-08,
+    "pair": 0.0,
+    "uniform": 0.009241026429711918,
+    "mix": 0.0037320567259886417,
+    "mix_flip": 0.026044544371860545
+   },
+   "best_classical": "mix_flip",
+   "classical_same_samples": {
+    "local": 4.736039782571311e-08,
+    "pair": 2.7755575615628914e-15,
+    "uniform": 0.006817497699604935,
+    "mix": 0.0026331777434384085,
+    "mix_flip": 0.02662604979754213
+   },
+   "best_classical_same_samples": "mix_flip",
+   "ideal_exact": {
+    "gap": 0.011725961603801127,
+    "tvd_stationary": 2.6874728051099485e-14,
+    "max_marginal_bias": 2.0539125955565396e-14,
+    "asymmetry": 1.297013906527227e-16,
+    "ratio_vs_best_classical": 0.45022717373663385,
+    "ratio_vs_best_classical_same_samples": 0.44039433911385384
+   },
+   "hardware": {
+    "gap": 0.008590886054736346,
+    "tvd_stationary": 0.15694927579379703,
+    "max_marginal_bias": 0.1569450392154908,
+    "asymmetry": 0.1907958984375,
+    "ratio_vs_best_classical": 0.3298535744022555,
+    "ratio_vs_best_classical_same_samples": 0.3226496652736441
+   },
+   "hardware_flip": {
+    "gap": 0.05311839026281562,
+    "tvd_stationary": 0.010752598651245452,
+    "max_marginal_bias": 0.007348809313151294,
+    "asymmetry": 0.143096923828125,
+    "ratio_vs_best_classical": 2.039520811130281,
+    "ratio_vs_best_classical_same_samples": 1.9949782512507364
+   }
+  },
+  {
+   "k_eff": 16,
+   "T": 1.215240709533367,
+   "classical": {
+    "local": 0.0010613792210580897,
+    "pair": 1.1102230246251565e-15,
+    "uniform": 0.020786748495358442,
+    "mix": 0.013996374252103538,
+    "mix_flip": 0.04317600768282848
+   },
+   "best_classical": "mix_flip",
+   "classical_same_samples": {
+    "local": 0.0010566835610371639,
+    "pair": 2.3314683517128287e-15,
+    "uniform": 0.019473960538926804,
+    "mix": 0.013046539016591918,
+    "mix_flip": 0.0432736291915119
+   },
+   "best_classical_same_samples": "mix_flip",
+   "ideal_exact": {
+    "gap": 0.025958078193145107,
+    "tvd_stationary": 2.0123095720527273e-14,
+    "max_marginal_bias": 9.880984919163893e-15,
+    "asymmetry": 1.297013906527227e-16,
+    "ratio_vs_best_classical": 0.601215341256966,
+    "ratio_vs_best_classical_same_samples": 0.5998590522247386
+   },
+   "hardware": {
+    "gap": 0.02168286881927972,
+    "tvd_stationary": 0.037032755426619546,
+    "max_marginal_bias": 0.029678632280938366,
+    "asymmetry": 0.1907958984375,
+    "ratio_vs_best_classical": 0.502197168820294,
+    "ratio_vs_best_classical_same_samples": 0.50106425609278
+   },
+   "hardware_flip": {
+    "gap": 0.053898224569089215,
+    "tvd_stationary": 0.019246556620179885,
+    "max_marginal_bias": 0.004570115251812723,
+    "asymmetry": 0.143096923828125,
+    "ratio_vs_best_classical": 1.2483373860090605,
+    "ratio_vs_best_classical_same_samples": 1.2455212464514376
+   }
+  }
+ ],
+ "options": "SamplerV2, gate twirling, dynamical decoupling, optimization_level 1 on a fixed line layout; SPAM twirling keys"
+}

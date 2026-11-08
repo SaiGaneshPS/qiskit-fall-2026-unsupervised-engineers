@@ -1,0 +1,58 @@
+sk        #0  K4: x4.71 (uniform)  K16: x6.01 (uniform)  [7s]
+sk        #1  K4: x10.68 (uniform)  K16: x8.50 (mix)  [15s]
+sk        #2  K4: x10.87 (mix)  K16: x5.19 (mix)  [23s]
+sk        #3  K4: x20.53 (uniform)  K16: x12.45 (mix)  [31s]
+sk        #4  K4: x4.52 (mix)  K16: x2.03 (mix)  [38s]
+sk        #5  K4: x21.09 (mix)  K16: x6.40 (mix)  [46s]
+shed      #0  K4: x0.94 (mix)  K16: x0.76 (mix)  [53s]
+shed      #1  K4: x0.41 (mix)  K16: x0.47 (mix)  [61s]
+shed      #2  K4: x0.94 (mix)  K16: x0.89 (mix)  [69s]
+shed      #3  K4: x1.08 (mix)  K16: x0.98 (mix)  [76s]
+shed      #4  K4: x2.38 (uniform)  K16: x2.13 (uniform)  [84s]
+shed      #5  K4: x0.38 (mix)  K16: x0.46 (mix)  [91s]
+partition #0  K4: x0.87 (uniform)  K16: x0.87 (uniform)  [99s]
+partition #1  K4: x1.17 (uniform)  K16: x1.17 (uniform)  [107s]
+partition #2  K4: x0.96 (uniform)  K16: x0.96 (uniform)  [114s]
+partition #3  K4: x1.57 (uniform)  K16: x1.57 (uniform)  [122s]
+partition #4  K4: x0.59 (uniform)  K16: x0.59 (uniform)  [129s]
+partition #5  K4: x1.20 (uniform)  K16: x1.20 (uniform)  [137s]
+maxcut3   #0  K4: x19.24 (uniform)  K16: x9.53 (mix)  [145s]
+maxcut3   #1  K4: x20.52 (uniform)  K16: x9.59 (mix)  [152s]
+maxcut3   #2  K4: x19.31 (uniform)  K16: x7.01 (mix)  [160s]
+maxcut3   #3  K4: x11.53 (mix)  K16: x4.90 (mix)  [168s]
+maxcut3   #4  K4: x14.24 (uniform)  K16: x6.71 (mix)  [175s]
+maxcut3   #5  K4: x13.58 (mix)  K16: x6.47 (mix)  [183s]
+tri_afm   #0  K4: x12.54 (uniform)  K16: x11.15 (uniform)  [190s]
+tri_afm   #1  K4: x2.27 (local)  K16: x1.77 (local)  [198s]
+tri_afm   #2  K4: x1.41 (local)  K16: x1.24 (local)  [205s]
+tri_afm   #3  K4: x7.23 (mix)  K16: x6.11 (mix)  [213s]
+tri_afm   #4  K4: x13.99 (uniform)  K16: x10.37 (uniform)  [221s]
+tri_afm   #5  K4: x17.48 (uniform)  K16: x11.23 (mix)  [228s]
+rfim      #0  K4: x1.98 (mix)  K16: x1.70 (mix)  [236s]
+rfim      #1  K4: x1.66 (local)  K16: x1.46 (local)  [243s]
+rfim      #2  K4: x8.59 (mix)  K16: x2.97 (local)  [251s]
+rfim      #3  K4: x3.02 (mix)  K16: x2.50 (mix)  [259s]
+rfim      #4  K4: x2.39 (local)  K16: x1.39 (local)  [266s]
+rfim      #5  K4: x1.98 (mix)  K16: x1.52 (local)  [274s]
+cliques   #0  K4: x1.42 (mix)  K16: x1.17 (mix)  [281s]
+cliques   #1  K4: x5.45 (uniform)  K16: x4.23 (uniform)  [289s]
+cliques   #2  K4: x5.93 (mix)  K16: x2.94 (mix)  [296s]
+cliques   #3  K4: x0.88 (mix)  K16: x1.22 (mix)  [303s]
+cliques   #4  K4: x0.92 (mix)  K16: x1.06 (mix)  [311s]
+cliques   #5  K4: x1.03 (mix)  K16: x1.26 (mix)  [318s]
+
+median quantum / best-classical gap ratio (wins out of instances):
+  sk        K=  4: median x10.78  min x4.52  wins 6/6
+  sk        K= 16: median x6.20  min x2.03  wins 6/6
+  shed      K=  4: median x0.94  min x0.38  wins 2/6
+  shed      K= 16: median x0.83  min x0.46  wins 1/6
+  partition K=  4: median x1.06  min x0.59  wins 3/6
+  partition K= 16: median x1.06  min x0.59  wins 3/6
+  maxcut3   K=  4: median x16.74  min x11.53  wins 6/6
+  maxcut3   K= 16: median x6.86  min x4.90  wins 6/6
+  tri_afm   K=  4: median x9.88  min x1.41  wins 6/6
+  tri_afm   K= 16: median x8.24  min x1.24  wins 6/6
+  rfim      K=  4: median x2.19  min x1.66  wins 6/6
+  rfim      K= 16: median x1.61  min x1.39  wins 6/6
+  cliques   K=  4: median x1.22  min x0.88  wins 4/6
+  cliques   K= 16: median x1.24  min x1.06  wins 6/6

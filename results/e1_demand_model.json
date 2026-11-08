@@ -1,0 +1,103 @@
+{
+ "n_train_hours": 23362,
+ "n_test_hours": 7502,
+ "test": {
+  "linear degree-hour (baseline)": {
+   "mae": 55.08176121318788,
+   "mape": 6.570148036374262,
+   "rmse": 66.51336236845528,
+   "mae_top1pct": 61.069735064429395,
+   "bias_top1pct": -27.554059350262246,
+   "peak_actual": 1636.67,
+   "peak_pred_at_peak_hour": 1670.4813339389455,
+   "daily_peak_mape": 5.44291830054461
+  },
+  "gradient boosting, no tail (baseline)": {
+   "mae": 48.19185467631325,
+   "mape": 5.697152668722881,
+   "rmse": 57.75875996647849,
+   "mae_top1pct": 63.00382933353192,
+   "bias_top1pct": 15.44893443310181,
+   "peak_actual": 1636.67,
+   "peak_pred_at_peak_hour": 1659.2360816269345,
+   "daily_peak_mape": 5.225883173827525
+  },
+  "gradient boosting + physics tail (ours)": {
+   "mae": 48.19185467631325,
+   "mape": 5.697152668722881,
+   "rmse": 57.75875996647849,
+   "mae_top1pct": 63.00382933353192,
+   "bias_top1pct": 15.44893443310181,
+   "peak_actual": 1636.67,
+   "peak_pred_at_peak_hour": 1659.2360816269345,
+   "daily_peak_mape": 5.225883173827525
+  }
+ },
+ "extrapolation_below_minus8C": {
+  "linear degree-hour (baseline)": {
+   "n_cold_hours": 757,
+   "mae": 79.8764451919104,
+   "bias": -59.98924827086228,
+   "mape": 5.2743842973871295
+  },
+  "gradient boosting, no tail (baseline)": {
+   "n_cold_hours": 757,
+   "mae": 79.78399119890094,
+   "bias": -69.975273261186,
+   "mape": 5.180559578123542
+  },
+  "gradient boosting + physics tail (ours)": {
+   "n_cold_hours": 757,
+   "mae": 40.82351914168704,
+   "bias": 1.3764352244657698,
+   "mape": 2.739843828581949
+  }
+ },
+ "stress_holdout_2022_23": {
+  "linear degree-hour (baseline)": {
+   "record_actual": 1979.5,
+   "record_pred": 1595.1214310286102,
+   "record_time": "2023-02-04 16:00:00+00:00",
+   "top10_mae": 237.95922569099872,
+   "mae": 101.71952000548396,
+   "mape": 8.032552360078213,
+   "rmse": 134.4587369551923,
+   "mae_top1pct": 201.10824668597,
+   "bias_top1pct": -200.62061082770634,
+   "peak_actual": 1979.5,
+   "peak_pred_at_peak_hour": 1595.1214310286102
+  },
+  "gradient boosting, no tail (baseline)": {
+   "record_actual": 1979.5,
+   "record_pred": 1657.197735853734,
+   "record_time": "2023-02-04 16:00:00+00:00",
+   "top10_mae": 233.68733019347573,
+   "mae": 112.13165395084513,
+   "mape": 8.875371301870102,
+   "rmse": 142.57868699445018,
+   "mae_top1pct": 182.53337193468545,
+   "bias_top1pct": -175.76067374247387,
+   "peak_actual": 1979.5,
+   "peak_pred_at_peak_hour": 1657.197735853734
+  },
+  "gradient boosting + physics tail (ours)": {
+   "record_actual": 1979.5,
+   "record_pred": 1657.197735853734,
+   "record_time": "2023-02-04 16:00:00+00:00",
+   "top10_mae": 231.65444496048826,
+   "mae": 112.13288915013568,
+   "mape": 8.87553609068754,
+   "rmse": 142.58186079644335,
+   "mae_top1pct": 181.7216144135698,
+   "bias_top1pct": -174.94891622135825,
+   "peak_actual": 1979.5,
+   "peak_pred_at_peak_hour": 1657.197735853734
+  }
+ },
+ "cold_slope_mw_per_c": -29.044470550119105,
+ "coldest_training_T_island": -16.815,
+ "resid_sd_train": 22.639012289786365,
+ "test_resid_sd": 55.44156621775904,
+ "test_peak_hour_resid_sd": 70.12412941438147,
+ "test_peak_hour_bias": 2.211996170515428
+}
